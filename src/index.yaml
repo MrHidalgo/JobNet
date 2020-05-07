@@ -1,0 +1,9 @@
+ProjectTitle: JobNet
+
+PageList:
+- file: index.html
+  titleName: Hall
+  ready: 1
+- file: hall.html
+  titleName: Booth Hall
+  ready: 1
