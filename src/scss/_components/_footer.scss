@@ -1,5 +1,43 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+	border-top: 1px solid #eaeaea;
+	background-color: $c-white;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 44px;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		&-item {
+			display: flex;
+
+			a,
+			span {
+				color: #999999;
+			}
+
+			a {
+				@include transition(color);
+
+				&:hover {
+					color: #663399;
+					@include transition(color);
+				}
+			}
+
+			span {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+	}
+}
 
 // FOOTER :: END

@@ -1,7 +1,42 @@
 // HEADER :: START
 
 header#header.header
-	.c-grid
+
+	.c-grid-fluid
+
 		.header__wrapper
+			.header__wrapper-left
+
+				.logo.logo--header
+					a.logo__btn(href="#")
+						img.logo__img(src="img/logo.png" srcset='img/logo@2x.png 2x' alt="")
+
+			.header__wrapper-right
+
+				.header__col.header__col-1
+
+					.header__btn-wrapper
+						a.header__btn.header__btn--exhibitors(href="#") Exhibitors
+						a.header__btn.header__btn--jobs(href="") Jobs
+
+				.header__col.header__col-2
+
+					a.header__link(href="#") News
+
+				.header__col.header__col-3
+
+					a.header__lang(href="#")
+						img(src="img/myanmar.svg" alt="")
+
+				.header__col.header__col-4
+
+					a.header__upload(href="#")
+						i.icon-font.icon-upload
+						span Upload Your Resume
+
+				.header__col.header__col-5
+
+					a.header__user(href="#")
+						img.header__user-img(src="img/img-user.png" srcset='img/img-user@2x.png 2x' alt="")
 
 // HEADER :: END

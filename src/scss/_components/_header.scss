@@ -1,5 +1,165 @@
 // HEADER :: START
 
-.header {}
+.header {
+	position: relative;
+	background-color: $c-white;
+	box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 66px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&-left {}
+		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+
+	&__col {
+		&-2 {
+			padding-left: 46px;
+		}
+		&-3 {
+			padding-left: 30px;
+			padding-right: 50px;
+		}
+		&-4 {
+			padding-right: 30px;
+		}
+	}
+
+	&__btn {
+		outline: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 115px;
+		height: 46px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: rgb(220, 220, 220);
+		border-radius: 6px;
+		background-color: rgb(254, 254, 254);
+		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.14);
+		color: #222222;
+		font-size: 18px;
+		font-weight: 600;
+		@include transition(background-color, color);
+
+		&:not(:first-of-type) {
+			margin-left: 10px;
+		}
+
+		&:hover {
+			background-color: #663399;
+			color: #fefefe;
+			@include transition(background-color, color);
+		}
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__link {
+		outline: none;
+		display: flex;
+		color: #222222;
+		font-size: 18px;
+		font-weight: 600;
+		@include transition(color);
+
+		&:hover {
+			color: #663399;
+			@include transition(color);
+		}
+	}
+
+	&__lang {
+		outline: none;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__upload {
+		outline: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 46px;
+		padding-left: 13px;
+		padding-right: 13px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: rgb(220, 220, 220);
+		border-radius: 6px;
+		background-color: #663399;
+		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.14);
+		@include transition(background-color);
+
+		&:hover {
+			background-color: #fefefe;
+			@include transition(background-color);
+
+			.icon-font,
+			span {
+				color: #663399;
+				@include transition(color);
+			}
+		}
+
+		.icon-font,
+		span {
+			color: #fefefe;
+			@include transition(color);
+		}
+
+		.icon-font {
+			margin-right: 15px;
+			font-size: 19px;
+		}
+
+		span {
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+
+	&__user {
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		width: 46px;
+		height: 46px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: rgb(220, 220, 220);
+		border-radius: 6px;
+		background-color: rgb(233, 231, 231);
+
+		&-img {
+			@extend %imageResCoverAbs;
+		}
+	}
+}
 
 // HEADER :: END

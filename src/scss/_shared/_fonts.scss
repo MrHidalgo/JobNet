@@ -63,3 +63,9 @@
 /// @include mixinFontFace("SF-Pro-Text", "-Heavy", "../fonts/", 800, otf);
 ///
 /// ===============
+@include mixinFontFace("ProximaNova", "-Extrabld", "../fonts/", 800, woff2 woff ttf svg);
+@include mixinFontFace("ProximaNova", "-Black", "../fonts/", 900, woff2 woff ttf svg);
+@include mixinFontFace("ProximaNova", "-Regular", "../fonts/", normal, woff2 woff ttf svg);
+@include mixinFontFace("ProximaNova", "-Bold", "../fonts/", bold, woff2 woff ttf svg);
+@include mixinFontFace("ProximaNova", "-Light", "../fonts/", 300, woff2 woff ttf svg);
+@include mixinFontFace("ProximaNova", "-Semibold", "../fonts/", 600, woff2 woff ttf svg);
