@@ -15,15 +15,15 @@ const initStellar = () => {
     $(function () {
       $.stellar({
         // Set scrolling to be in either one or both directions
-        horizontalScrolling: false,
-        verticalScrolling: true,
+        horizontalScrolling: true,
+        verticalScrolling: false,
 
         // Set the global alignment offsets
         horizontalOffset: 0,
         verticalOffset: 0,
 
         // Refreshes parallax content on window load and resize
-        responsive: false,
+        responsive: true,
 
         // Select which property is used to calculate scroll.
         // Choose 'scroll', 'position', 'margin' or 'transform',
@@ -33,7 +33,7 @@ const initStellar = () => {
         // Select which property is used to position elements.
         // Choose between 'position' or 'transform',
         // or write your own 'positionProperty' plugin.
-        positionProperty: 'position',
+        positionProperty: 'transform',
 
         // Enable or disable the two types of parallax
         parallaxBackgrounds: true,

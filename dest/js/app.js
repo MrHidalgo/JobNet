@@ -142,15 +142,15 @@ var initStellar = function initStellar() {
     $(function () {
       $.stellar({
         // Set scrolling to be in either one or both directions
-        horizontalScrolling: false,
-        verticalScrolling: true,
+        horizontalScrolling: true,
+        verticalScrolling: false,
 
         // Set the global alignment offsets
         horizontalOffset: 0,
         verticalOffset: 0,
 
         // Refreshes parallax content on window load and resize
-        responsive: false,
+        responsive: true,
 
         // Select which property is used to calculate scroll.
         // Choose 'scroll', 'position', 'margin' or 'transform',
@@ -160,7 +160,7 @@ var initStellar = function initStellar() {
         // Select which property is used to position elements.
         // Choose between 'position' or 'transform',
         // or write your own 'positionProperty' plugin.
-        positionProperty: 'position',
+        positionProperty: 'transform',
 
         // Enable or disable the two types of parallax
         parallaxBackgrounds: true,
@@ -276,7 +276,42 @@ var initSwiper = function initSwiper() {
   * =============================================
   * CALLBACK :: start
   * ============================================= */
+  var mainHeightSize = function mainHeightSize() {
+    var _main = $('#main .main__scroll');
 
+    function _helperResize() {
+      var _headerHeight = $("header").outerHeight(true),
+          _footerHeight = $('footer').outerHeight(true),
+          _advertisingHeight = $('#advertising').outerHeight(true);
+
+      var _windowHeight = $(window).outerHeight(true),
+          _otherHeightContent = _headerHeight + _footerHeight + _advertisingHeight,
+          _maxHeight = _windowHeight - _otherHeightContent,
+          _wrapper1Height = _maxHeight * 25 / 100,
+          _wrapper2Height = _maxHeight * 30 / 100,
+          _wrapper3Height = _maxHeight - (_wrapper1Height + _wrapper2Height);
+
+      _main.css({ height: 'calc(100vh - (' + _otherHeightContent + 'px))' });
+
+      $('#main .main__box-wrapper-1').css({ height: _wrapper1Height });
+      $('#main .main__box-wrapper-2').css({ height: _wrapper2Height });
+      $('#main .main__box-wrapper-3').css({ height: _wrapper3Height });
+    }
+
+    $(window).on('load', function () {
+      setTimeout(function (ev) {
+        _helperResize();
+
+        _main.animate({
+          opacity: 1
+        }, 750);
+      }, 200);
+    });
+
+    $(window).on('resize', function (ev) {
+      _helperResize();
+    });
+  };
   /*
   * CALLBACK :: end
   * ============================================= */
@@ -301,6 +336,7 @@ var initSwiper = function initSwiper() {
     // ==========================================
 
     // callback
+    mainHeightSize();
     // ==========================================
   };
   initNative();
