@@ -42,14 +42,17 @@
 	@if $filename == linkedin {
 		$char: "\E005";
 	}
-	@if $filename == star {
+	@if $filename == star-filled {
 		$char: "\E006";
 	}
-	@if $filename == upload {
+	@if $filename == star {
 		$char: "\E007";
 	}
-	@if $filename == visitor {
+	@if $filename == upload {
 		$char: "\E008";
+	}
+	@if $filename == visitor {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -84,6 +87,10 @@
 }
 .icon-linkedin {
 	@include icon(linkedin);
+
+}
+.icon-star-filled {
+	@include icon(star-filled);
 
 }
 .icon-star {

@@ -21,13 +21,13 @@
 		position: relative;
 		width: 100%;
 		height: 203px;
-		border-style: solid;
-		border-width: 1px;
-		border-color: rgb(234, 234, 234);
-		border-radius: 8px;
 		background-color: rgb(255, 255, 255);
-		box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
 		transform: translateZ(0);
+
+		iframe,
+		video {
+			@extend %imageResCoverAbs;
+		}
 
 		&-wrapper {
 			display: flex;
