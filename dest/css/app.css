@@ -649,7 +649,7 @@ picture {
 /* line 11, src/scss/_components/_main.scss */
 .main__scroll {
   opacity: 0;
-  overflow-x: auto;
+  overflow: hidden;
   white-space: nowrap;
   position: relative;
   width: 100%;

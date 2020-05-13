@@ -42,6 +42,14 @@
 			_helperResize();
 		});
 	};
+
+
+	const perfectScrollbarCB = () => {
+		const ps = new PerfectScrollbar('#mainScroll-js', {
+			wheelSpeed: 2,
+			wheelPropagation: true
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -68,6 +76,7 @@
 
 		// callback
 		mainHeightSize();
+		perfectScrollbarCB();
 		// ==========================================
 	};
 	initNative();

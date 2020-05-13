@@ -10,7 +10,7 @@
 
 	&__scroll {
 		opacity: 0;
-		overflow-x: auto;
+		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
 		width: 100%;

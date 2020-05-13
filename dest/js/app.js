@@ -312,6 +312,13 @@ var initSwiper = function initSwiper() {
       _helperResize();
     });
   };
+
+  var perfectScrollbarCB = function perfectScrollbarCB() {
+    var ps = new PerfectScrollbar('#mainScroll-js', {
+      wheelSpeed: 2,
+      wheelPropagation: true
+    });
+  };
   /*
   * CALLBACK :: end
   * ============================================= */
@@ -337,6 +344,7 @@ var initSwiper = function initSwiper() {
 
     // callback
     mainHeightSize();
+    perfectScrollbarCB();
     // ==========================================
   };
   initNative();
