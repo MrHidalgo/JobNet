@@ -27,8 +27,20 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == upload {
+	@if $filename == arrow-back {
 		$char: "\E001";
+	}
+	@if $filename == facebook {
+		$char: "\E002";
+	}
+	@if $filename == linkedin {
+		$char: "\E003";
+	}
+	@if $filename == upload {
+		$char: "\E004";
+	}
+	@if $filename == visitor {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -45,7 +57,23 @@
 	}
 }
 
+.icon-arrow-back {
+	@include icon(arrow-back);
+
+}
+.icon-facebook {
+	@include icon(facebook);
+
+}
+.icon-linkedin {
+	@include icon(linkedin);
+
+}
 .icon-upload {
 	@include icon(upload);
+
+}
+.icon-visitor {
+	@include icon(visitor);
 
 }

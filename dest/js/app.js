@@ -279,6 +279,10 @@ var initSwiper = function initSwiper() {
   var mainHeightSize = function mainHeightSize() {
     var _main = $('#main .main__scroll');
 
+    if (!_main) {
+      return false;
+    }
+
     function _helperResize() {
       var _headerHeight = $("header").outerHeight(true),
           _footerHeight = $('footer').outerHeight(true),

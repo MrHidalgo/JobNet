@@ -9,6 +9,10 @@
 	const mainHeightSize = () => {
 		const _main = $('#main .main__scroll');
 
+		if(!_main) {
+			return false;
+		}
+
 		function _helperResize() {
 			const _headerHeight = $("header").outerHeight(true),
 				_footerHeight = $('footer').outerHeight(true),

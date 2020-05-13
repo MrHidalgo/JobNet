@@ -1,0 +1,27 @@
+// SECTION :: START
+
+.advertising {
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	&__box {
+		width: 100%;
+		max-width: calc(100% / 3);
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+}
+
+// SECTION :: END

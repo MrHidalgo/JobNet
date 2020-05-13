@@ -46,5 +46,8 @@
 @import "_components/header";
 @import "_components/footer";
 
-@import "_components/main";
-@import "_components/advertising";
+@import "_components/main/main";
+@import "_components/main/advertising";
+
+@import "_components/aside/stand";
+@import "_components/aside/details";
