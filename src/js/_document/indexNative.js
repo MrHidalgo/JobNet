@@ -49,10 +49,12 @@
 
 
 	const perfectScrollbarCB = () => {
-		const ps = new PerfectScrollbar('#mainScroll-js', {
-			wheelSpeed: 2,
-			wheelPropagation: true
-		});
+		if(document.getElementById('mainScroll-js')) {
+			const ps = new PerfectScrollbar('#mainScroll-js', {
+				wheelSpeed: 2,
+				wheelPropagation: true
+			});
+		}
 	};
 	/*
 	* CALLBACK :: end

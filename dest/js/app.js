@@ -318,10 +318,12 @@ var initSwiper = function initSwiper() {
   };
 
   var perfectScrollbarCB = function perfectScrollbarCB() {
-    var ps = new PerfectScrollbar('#mainScroll-js', {
-      wheelSpeed: 2,
-      wheelPropagation: true
-    });
+    if (document.getElementById('mainScroll-js')) {
+      var ps = new PerfectScrollbar('#mainScroll-js', {
+        wheelSpeed: 2,
+        wheelPropagation: true
+      });
+    }
   };
   /*
   * CALLBACK :: end

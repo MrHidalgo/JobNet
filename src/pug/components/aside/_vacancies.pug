@@ -1,0 +1,51 @@
+// SECTION :: START
+
+mixin tableRow(val1, val2, val3, val4, val5, val6)
+	.vacancies__table-tr
+		.vacancies__table-td.vacancies__table-td-1
+			a(href="")!= val1
+		.vacancies__table-td.vacancies__table-td-2
+			span!= val2
+		.vacancies__table-td.vacancies__table-td-3
+			span!= val3
+		.vacancies__table-td.vacancies__table-td-4
+			a(href="")!= val4
+		.vacancies__table-td.vacancies__table-td-5
+			span!= val5
+		.vacancies__table-td.vacancies__table-td-6
+			span!= val6
+		.vacancies__table-td.vacancies__table-td-7
+			a(href="#") View Job
+
+section#vacancies.vacancies
+	.c-grid
+
+		p.section__title Job Vacancies
+
+		.vacancies__table
+			.vacancies__table-head
+				.vacancies__table-tr
+					.vacancies__table-th.vacancies__table-th-1
+						p Position
+					.vacancies__table-th.vacancies__table-th-2
+						p Experience Level
+					.vacancies__table-th.vacancies__table-th-3
+						p Posts
+					.vacancies__table-th.vacancies__table-th-4
+						p Max Salary
+					.vacancies__table-th.vacancies__table-th-5
+						p Job Location
+					.vacancies__table-th.vacancies__table-th-6
+						p Last Posted
+					.vacancies__table-th.vacancies__table-th-7
+						a(href="#") View All
+
+			.vacancies__table-body
+				+tableRow('Front Officer Surveillance Engineer', 'Experience Non-Manger', '3', 'Login to view Salary', 'Yangon', '02 Apr 2020')
+				+tableRow('Doore to Door Sales / Fleet On Street', 'Experience Non-Manger', '15', 'Login to view Salary', 'Yangon', '02 Apr 2020')
+				+tableRow('Comercial Director', 'Director and Above', '3', 'Login to view Salary', 'Yangon', '02 Apr 2020')
+				+tableRow('Store Sales Supervisor (Mandalay)', 'Experience Non-Manger', '1', 'Login to view Salary', 'Yangon', '02 Apr 2020')
+				+tableRow('Product Development Manager', 'Experience Non-Manger', '3', 'Login to view Salary', 'Yangon', '02 Apr 2020')
+
+
+// SECTION :: END
