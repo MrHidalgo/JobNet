@@ -33,14 +33,23 @@
 	@if $filename == facebook {
 		$char: "\E002";
 	}
-	@if $filename == linkedin {
+	@if $filename == highlighter {
 		$char: "\E003";
 	}
-	@if $filename == upload {
+	@if $filename == like {
 		$char: "\E004";
 	}
-	@if $filename == visitor {
+	@if $filename == linkedin {
 		$char: "\E005";
+	}
+	@if $filename == star {
+		$char: "\E006";
+	}
+	@if $filename == upload {
+		$char: "\E007";
+	}
+	@if $filename == visitor {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -65,8 +74,20 @@
 	@include icon(facebook);
 
 }
+.icon-highlighter {
+	@include icon(highlighter);
+
+}
+.icon-like {
+	@include icon(like);
+
+}
 .icon-linkedin {
 	@include icon(linkedin);
+
+}
+.icon-star {
+	@include icon(star);
 
 }
 .icon-upload {

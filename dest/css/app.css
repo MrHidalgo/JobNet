@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.header__user-img {
+.header__user-img, .gallery__image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow-back:before, .icon-facebook:before, .icon-linkedin:before, .icon-upload:before, .icon-visitor:before {
+.icon-arrow-back:before, .icon-facebook:before, .icon-highlighter:before, .icon-like:before, .icon-linkedin:before, .icon-star:before, .icon-upload:before, .icon-visitor:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,29 +30,44 @@
   text-transform: none;
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
+/* line 59, src/scss/_generated/_spriteFont.scss */
 .icon-arrow-back:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
+/* line 59, src/scss/_generated/_spriteFont.scss */
 .icon-facebook:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-linkedin:before {
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-highlighter:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-upload:before {
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-like:before {
   content: "";
 }
 
-/* line 50, src/scss/_generated/_spriteFont.scss */
-.icon-visitor:before {
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-linkedin:before {
   content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-star:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-upload:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-visitor:before {
+  content: "";
 }
 
 @font-face {
@@ -346,7 +361,30 @@ main {
           box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
 }
 
-/* line 18, src/scss/_shared/_common.scss */
+/* line 17, src/scss/_shared/_common.scss */
+.section__title {
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* line 22, src/scss/_shared/_common.scss */
+.section__title--pb0 {
+  padding-bottom: 0;
+}
+
+/* line 27, src/scss/_shared/_common.scss */
+.section__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #445ee9;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* line 35, src/scss/_shared/_common.scss */
 .copyright {
   display: -webkit-box;
   display: -webkit-flex;
@@ -354,7 +392,7 @@ main {
   display: flex;
 }
 
-/* line 21, src/scss/_shared/_common.scss */
+/* line 38, src/scss/_shared/_common.scss */
 .copyright__text {
   color: #999999;
 }
@@ -1240,6 +1278,337 @@ main {
   color: #222222;
   font-size: 16px;
   font-weight: 600;
+}
+
+/* line 3, src/scss/_components/aside/_profile.scss */
+.profile {
+  padding-bottom: 20px;
+}
+
+/* line 6, src/scss/_components/aside/_profile.scss */
+.profile__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+/* line 13, src/scss/_components/aside/_profile.scss */
+.profile__wrapper-middle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* line 22, src/scss/_components/aside/_profile.scss */
+.profile__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 27, src/scss/_components/aside/_profile.scss */
+.profile__col {
+  width: 100%;
+  max-width: -webkit-calc((100% - 80px) / 3);
+  max-width: calc((100% - 80px) / 3);
+}
+
+/* line 32, src/scss/_components/aside/_profile.scss */
+.profile__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 340px;
+}
+
+/* line 38, src/scss/_components/aside/_profile.scss */
+.profile__list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 41, src/scss/_components/aside/_profile.scss */
+.profile__list-item:not(:last-of-type) {
+  padding-bottom: 15px;
+}
+
+/* line 46, src/scss/_components/aside/_profile.scss */
+.profile__list-item > div:nth-of-type(1) {
+  width: 120px;
+}
+
+/* line 49, src/scss/_components/aside/_profile.scss */
+.profile__list-item > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 56, src/scss/_components/aside/_profile.scss */
+.profile__list-item p,
+.profile__list-item span,
+.profile__list-item a {
+  font-size: 16px;
+}
+
+/* line 62, src/scss/_components/aside/_profile.scss */
+.profile__list-item p {
+  color: #222;
+  font-weight: 600;
+}
+
+/* line 67, src/scss/_components/aside/_profile.scss */
+.profile__list-item span {
+  color: #6e6e6e;
+}
+
+/* line 71, src/scss/_components/aside/_profile.scss */
+.profile__list-item a {
+  color: #445ee9;
+}
+
+/* line 77, src/scss/_components/aside/_profile.scss */
+.profile__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+/* line 83, src/scss/_components/aside/_profile.scss */
+.profile__title .icon-font {
+  margin-right: 10px;
+  color: #663399;
+  font-size: 32px;
+}
+
+/* line 89, src/scss/_components/aside/_profile.scss */
+.profile__title span {
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* line 96, src/scss/_components/aside/_profile.scss */
+.profile__description {
+  color: #6e6e6e;
+  font-size: 16px;
+}
+
+/* line 100, src/scss/_components/aside/_profile.scss */
+.profile__description:not(:last-of-type) {
+  padding-bottom: 15px;
+}
+
+/* line 3, src/scss/_components/aside/_gallery.scss */
+.gallery {
+  padding-bottom: 20px;
+}
+
+/* line 6, src/scss/_components/aside/_gallery.scss */
+.gallery__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+/* line 11, src/scss/_components/aside/_gallery.scss */
+.gallery__wrapper-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* line 19, src/scss/_components/aside/_gallery.scss */
+.gallery__image {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 271px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eaeaea;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+/* line 33, src/scss/_components/aside/_gallery.scss */
+.gallery__image:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.55s ease-in-out;
+  transition: -webkit-transform 0.55s ease-in-out;
+  -o-transition: transform 0.55s ease-in-out;
+  transition: transform 0.55s ease-in-out;
+  transition: transform 0.55s ease-in-out, -webkit-transform 0.55s ease-in-out;
+}
+
+/* line 39, src/scss/_components/aside/_gallery.scss */
+.gallery__image img {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.45s ease-in-out;
+  transition: -webkit-transform 0.45s ease-in-out;
+  -o-transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
+}
+
+/* line 46, src/scss/_components/aside/_gallery.scss */
+.gallery__image-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 50, src/scss/_components/aside/_gallery.scss */
+.gallery__image-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - (24px * 3)) / 4);
+  max-width: calc((100% - (24px * 3)) / 4);
+}
+
+/* line 3, src/scss/_components/aside/_video.scss */
+.video {
+  padding-bottom: 20px;
+}
+
+/* line 6, src/scss/_components/aside/_video.scss */
+.video__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+/* line 11, src/scss/_components/aside/_video.scss */
+.video__wrapper-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* line 19, src/scss/_components/aside/_video.scss */
+.video__poster {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 203px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eaeaea;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+/* line 32, src/scss/_components/aside/_video.scss */
+.video__poster-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 36, src/scss/_components/aside/_video.scss */
+.video__poster-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - (40px * 2)) / 3);
+  max-width: calc((100% - (40px * 2)) / 3);
 }
 
 /*# sourceMappingURL=maps/app.css.map */
