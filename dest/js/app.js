@@ -325,6 +325,13 @@ var initSwiper = function initSwiper() {
       });
     }
   };
+
+  var detailsToggle = function detailsToggle() {
+    $('[details-link-js]').on('click', function (ev) {
+      $('[details-link-js]').removeClass('is-active');
+      $(ev.currentTarget).addClass('is-active');
+    });
+  };
   /*
   * CALLBACK :: end
   * ============================================= */
@@ -351,6 +358,7 @@ var initSwiper = function initSwiper() {
     // callback
     mainHeightSize();
     perfectScrollbarCB();
+    detailsToggle();
     // ==========================================
   };
   initNative();

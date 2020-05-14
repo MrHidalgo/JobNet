@@ -56,6 +56,14 @@
 			});
 		}
 	};
+
+
+	const detailsToggle = () => {
+		$('[details-link-js]').on('click', (ev) => {
+			$('[details-link-js]').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -83,6 +91,7 @@
 		// callback
 		mainHeightSize();
 		perfectScrollbarCB();
+		detailsToggle();
 		// ==========================================
 	};
 	initNative();

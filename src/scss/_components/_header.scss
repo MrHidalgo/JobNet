@@ -1,7 +1,11 @@
 // HEADER :: START
 
 .header {
-	position: relative;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	background-color: $c-white;
 	box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
 
