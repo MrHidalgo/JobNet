@@ -158,7 +158,7 @@
               <div>
                 <p class="section__title section__title--pb0">Gallery</p>
               </div>
-              <div><a class="section__link" href="#">See All 123 Photo</a></div>
+              <div><a class="section__link" href="#galleryModal" popup-js data-effect="mfp-zoom-in">See All 123 Photo</a></div>
             </div>
             <div class="gallery__wrapper-bottom">
               <div class="gallery__image-wrapper">
@@ -179,6 +179,27 @@
           </div>
         </div>
       </section>
+      <div class="c-modal mfp-hide mfp-with-anim" id="galleryModal">
+              <div class="c-modal__header">
+                <p class="c-modal__title section__title section__title--pb0">Gallery</p>
+              </div>
+              <div class="c-modal__body">
+                <div class="c-modal__body-left"><a class="c-modal__btn c-modal__btn--prev" href="#"><i class="icon-font icon-arrow-back"></i></a></div>
+                <div class="c-modal__body-middle">
+                  <div class="c-modal__slider">
+                    <div class="swiper-container gallerySlider">
+                      <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://live.staticflickr.com/2877/10688437793_3e44d06fba_b.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="https://live.staticflickr.com/2877/10688437793_3e44d06fba_b.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="https://live.staticflickr.com/2877/10688437793_3e44d06fba_b.jpg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-modal__body-right"><a class="c-modal__btn c-modal__btn--next" href="#"><i class="icon-font icon-arrow-back"></i></a></div>
+              </div>
+              <div class="c-modal__footer"></div>
+      </div>
       <!-- SECTION :: END-->
       <!-- SECTION :: START-->
       <section class="video" id="video">
@@ -188,7 +209,7 @@
               <div>
                 <p class="section__title section__title--pb0">Video</p>
               </div>
-              <div><a class="section__link" href="#">See All 23 Video</a></div>
+              <div><a class="section__link" href="#videoModal" popup-js data-effect="mfp-zoom-in">See All 23 Video</a></div>
             </div>
             <div class="video__wrapper-bottom">
               <div class="video__poster-wrapper">
@@ -212,6 +233,33 @@
           </div>
         </div>
       </section>
+      <div class="c-modal mfp-hide mfp-with-anim" id="videoModal">
+              <div class="c-modal__header">
+                <p class="c-modal__title section__title section__title--pb0">Video</p>
+              </div>
+              <div class="c-modal__body">
+                <div class="c-modal__body-left"><a class="c-modal__btn c-modal__btn--prev" href="#"><i class="icon-font icon-arrow-back"></i></a></div>
+                <div class="c-modal__body-middle">
+                  <div class="c-modal__slider">
+                    <div class="swiper-container videoSlider">
+                      <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <iframe src="https://www.youtube.com/embed/ZvKjKTj6ssQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <iframe src="https://www.youtube.com/embed/AXnpiWNsvXE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <iframe src="https://www.youtube.com/embed/JNcv7IxyNSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-modal__body-right"><a class="c-modal__btn c-modal__btn--next" href="#"><i class="icon-font icon-arrow-back"></i></a></div>
+              </div>
+              <div class="c-modal__footer"></div>
+      </div>
       <!-- SECTION :: END-->
       <!-- SECTION :: START-->
       <section class="testimonials" id="testimonials">
@@ -221,7 +269,7 @@
               <div>
                 <p class="section__title section__title--pb0">Testimonials</p>
               </div>
-              <div><a class="section__link" href="#">See All 123 Testimonials</a></div>
+              <div><a class="section__link" href="#testimonialsModal" popup-js data-effect="mfp-zoom-in">See All 123 Testimonials</a></div>
             </div>
             <div class="testimonials__wrapper-bottom">
               <div class="testimonials__post-wrapper">
@@ -264,6 +312,75 @@
           </div>
         </div>
       </section>
+      <div class="c-modal mfp-hide mfp-with-anim" id="testimonialsModal">
+              <div class="c-modal__header">
+                <p class="c-modal__title section__title section__title--pb0">Testimonials</p>
+              </div>
+              <div class="c-modal__body">
+                <div class="c-modal__body-left"><a class="c-modal__btn c-modal__btn--prev" href="#"><i class="icon-font icon-arrow-back"></i></a></div>
+                <div class="c-modal__body-middle">
+                  <div class="c-modal__slider">
+                    <div class="swiper-container testimonialsSlider">
+                      <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <div class="testimonials__post">
+                                        <div class="testimonials__post-head">
+                                          <div>
+                                            <div class="testimonials__post-user"><img src="img/img-testimonials-user.png" srcset="img/img-testimonials-user@2x.png 2x" alt=""></div>
+                                          </div>
+                                          <div>
+                                            <p class="testimonials__post-name">Ma Hnin Wai Wai Kyaw - Senior Manager</p>
+                                            <p class="testimonials__post-position">Fraud & Revenue Assurance - Finance Department</p>
+                                            <div class="testimonials__post-rating"><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-star-filled"></i></div>
+                                          </div>
+                                        </div>
+                                        <div class="testimonials__post-body">
+                                          <p class="testimonials__post-desc">1. Why do you want to work at our company? Ananda is fastest growing company with good reputation. The culture is top notch and working with experts from U.S, etc., is credit. Telecom owned by local is my personal preference. Everybody wants to achieve their career goals and Ananda is the best to make it happen. 2. What do you expect at working here? I like to work for a company that gives challenging roles, rational career growth, great learning opportunities, and job satisfaction. Ananda would allow me to apply international working experiences and grow together with it as a professional.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <div class="testimonials__post">
+                                        <div class="testimonials__post-head">
+                                          <div>
+                                            <div class="testimonials__post-user"><img src="img/img-testimonials-user.png" srcset="img/img-testimonials-user@2x.png 2x" alt=""></div>
+                                          </div>
+                                          <div>
+                                            <p class="testimonials__post-name">Ma Hnin Wai Wai Kyaw - Senior Manager</p>
+                                            <p class="testimonials__post-position">Fraud & Revenue Assurance - Finance Department</p>
+                                            <div class="testimonials__post-rating"><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-star-filled"></i></div>
+                                          </div>
+                                        </div>
+                                        <div class="testimonials__post-body">
+                                          <p class="testimonials__post-desc">1. Why do you want to work at our company? Ananda is fastest growing company with good reputation. The culture is top notch and working with experts from U.S, etc., is credit. Telecom owned by local is my personal preference. Everybody wants to achieve their career goals and Ananda is the best to make it happen. 2. What do you expect at working here? I like to work for a company that gives challenging roles, rational career growth, great learning opportunities, and job satisfaction. Ananda would allow me to apply international working experiences and grow together with it as a professional.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <div class="testimonials__post">
+                                        <div class="testimonials__post-head">
+                                          <div>
+                                            <div class="testimonials__post-user"><img src="img/img-testimonials-user.png" srcset="img/img-testimonials-user@2x.png 2x" alt=""></div>
+                                          </div>
+                                          <div>
+                                            <p class="testimonials__post-name">Ma Hnin Wai Wai Kyaw - Senior Manager</p>
+                                            <p class="testimonials__post-position">Fraud & Revenue Assurance - Finance Department</p>
+                                            <div class="testimonials__post-rating"><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-filled icon-star-filled"></i><i class="icon-font icon-star-filled"></i></div>
+                                          </div>
+                                        </div>
+                                        <div class="testimonials__post-body">
+                                          <p class="testimonials__post-desc">1. Why do you want to work at our company? Ananda is fastest growing company with good reputation. The culture is top notch and working with experts from U.S, etc., is credit. Telecom owned by local is my personal preference. Everybody wants to achieve their career goals and Ananda is the best to make it happen. 2. What do you expect at working here? I like to work for a company that gives challenging roles, rational career growth, great learning opportunities, and job satisfaction. Ananda would allow me to apply international working experiences and grow together with it as a professional.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-modal__body-right"><a class="c-modal__btn c-modal__btn--next" href="#"><i class="icon-font icon-arrow-back"></i></a></div>
+              </div>
+              <div class="c-modal__footer"></div>
+      </div>
       <!-- SECTION :: END-->
       <!-- SECTION :: START-->
       <section class="document" id="document">

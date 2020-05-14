@@ -7,7 +7,7 @@ section#gallery.gallery
 				div
 					p.section__title.section__title--pb0 Gallery
 				div
-					a.section__link(href="#") See All 123 Photo
+					a.section__link(href="#galleryModal" popup-js data-effect='mfp-zoom-in') See All 123 Photo
 
 			.gallery__wrapper-bottom
 
@@ -24,5 +24,38 @@ section#gallery.gallery
 					div
 						.gallery__image
 							img(src="img/img-gallery-4.jpg" srcset="img/img-gallery-4@2x.jpg 2x" alt="")
+
+mixin modalContent()
+	.c-modal__header
+		p.c-modal__title.section__title.section__title--pb0 Gallery
+
+	.c-modal__body
+		.c-modal__body-left
+
+			a.c-modal__btn.c-modal__btn--prev(href="#")
+				i.icon-font.icon-arrow-back
+
+		.c-modal__body-middle
+
+			.c-modal__slider
+
+				mixin swiperContent()
+					.swiper-slide
+						img(src="https://live.staticflickr.com/2877/10688437793_3e44d06fba_b.jpg" alt="")
+					.swiper-slide
+						img(src="https://live.staticflickr.com/2877/10688437793_3e44d06fba_b.jpg" alt="")
+					.swiper-slide
+						img(src="https://live.staticflickr.com/2877/10688437793_3e44d06fba_b.jpg" alt="")
+
+				+swiper('gallerySlider', 'swiperContent', false, false, false)
+
+		.c-modal__body-right
+
+			a.c-modal__btn.c-modal__btn--next(href="#")
+				i.icon-font.icon-arrow-back
+
+	.c-modal__footer
+
++modal('galleryModal', 'modalContent')
 
 // SECTION :: END

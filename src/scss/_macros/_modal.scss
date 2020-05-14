@@ -1,5 +1,91 @@
 // MODAL :: START
 
-.c-modal {}
+.c-modal {
+	&#galleryModal,
+	&#videoModal,
+	&#testimonialsModal {
+		max-width: 1140px;
+
+		.mfp-close {
+			opacity: 1;
+			color: #222222;
+			font-size: 34px;
+		}
+
+		.c-modal {
+			&__header {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 65px;
+			}
+
+			&__body {
+				display: flex;
+				align-items: center;
+
+				&-left,
+				&-right {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 65px;
+				}
+
+				&-middle {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+				}
+			}
+
+			&__footer {
+				min-height: 65px;
+			}
+
+			&__btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				border-style: solid;
+				border-width: 1px;
+				border-color: rgb(234, 234, 234);
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
+				@include transition(opacity, box-shadow);
+
+				&.swiper-button-disabled {
+					pointer-events: none;
+					opacity: 0.5;
+					@include transition(opacity);
+				}
+
+				&--next {
+					.icon-font {
+						transform: scale(-1);
+					}
+				}
+
+				&:hover {
+					box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+					@include transition(box-shadow);
+
+					.icon-font {
+						color: #663399;
+						@include transition(color);
+					}
+				}
+
+				.icon-font {
+					color: #222222;
+					@include transition(color);
+				}
+			}
+		}
+	}
+}
 
 // MODAL :: END

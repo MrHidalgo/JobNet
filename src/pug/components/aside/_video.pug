@@ -7,7 +7,7 @@ section#video.video
 				div
 					p.section__title.section__title--pb0 Video
 				div
-					a.section__link(href="#") See All 23 Video
+					a.section__link(href="#videoModal" popup-js data-effect='mfp-zoom-in') See All 23 Video
 
 			.video__wrapper-bottom
 
@@ -21,5 +21,38 @@ section#video.video
 					div
 						.video__poster
 							iframe(src="https://www.youtube.com/embed/JNcv7IxyNSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+mixin modalContent()
+	.c-modal__header
+		p.c-modal__title.section__title.section__title--pb0 Video
+
+	.c-modal__body
+		.c-modal__body-left
+
+			a.c-modal__btn.c-modal__btn--prev(href="#")
+				i.icon-font.icon-arrow-back
+
+		.c-modal__body-middle
+
+			.c-modal__slider
+
+				mixin swiperContent()
+					.swiper-slide
+						iframe(src="https://www.youtube.com/embed/ZvKjKTj6ssQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					.swiper-slide
+						iframe(src="https://www.youtube.com/embed/AXnpiWNsvXE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					.swiper-slide
+						iframe(src="https://www.youtube.com/embed/JNcv7IxyNSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+				+swiper('videoSlider', 'swiperContent', false, false, false)
+
+		.c-modal__body-right
+
+			a.c-modal__btn.c-modal__btn--next(href="#")
+				i.icon-font.icon-arrow-back
+
+	.c-modal__footer
+
++modal('videoModal', 'modalContent')
 
 // SECTION :: END

@@ -1,5 +1,30 @@
-.swiper-container {
-  width: 100%;
-  max-width: 500px;
-  height: 300px;
+.swiper {
+	&-container {
+		width: 100%;
+
+		&.testimonialsSlider {
+			.swiper {
+				&-slide {
+					height: auto;
+
+					.testimonials__post {
+						min-height: unset;
+					}
+				}
+			}
+		}
+	}
+
+	&-wrapper {}
+
+	&-slide {
+		position: relative;
+		width: 100%;
+		height: 500px;
+
+		img,
+		iframe, {
+			@extend %imageResCoverAbs;
+		}
+	}
 }

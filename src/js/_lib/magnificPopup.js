@@ -21,6 +21,11 @@ const initPopups = () => {
       beforeOpen: function() {
         this.st.mainClass = this.st.el.attr('data-effect');
       },
+      open: function() {
+				gallerySlider = new Swiper('.gallerySlider', gallerySliderOpt);
+				videoSlider = new Swiper('.videoSlider', videoSliderOpt);
+				testimonialsSlider = new Swiper('.testimonialsSlider', testimonialsSliderOpt);
+			},
       close: function() {}
     }
   });
