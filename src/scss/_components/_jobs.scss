@@ -58,7 +58,7 @@
 	}
 
 	&__title {
-		color: #222222;
+		color: #663399;
 		text-transform: uppercase;
 		font-size: 16px;
 		font-weight: 600;
@@ -138,12 +138,19 @@
 		&-details {
 			padding: 15px 20px;
 
-			p {
+			a {
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				display: flex;
 				color: #222222;
 				font-size: 16px;
+				@include transition(color);
+
+				&:hover {
+					color: #663399;
+					@include transition(color);
+				}
 
 				&:not(:last-of-type) {
 					padding-bottom: 10px;
