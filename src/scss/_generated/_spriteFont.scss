@@ -30,29 +30,32 @@
 	@if $filename == arrow-back {
 		$char: "\E001";
 	}
-	@if $filename == facebook {
+	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == highlighter {
+	@if $filename == facebook {
 		$char: "\E003";
 	}
-	@if $filename == like {
+	@if $filename == highlighter {
 		$char: "\E004";
 	}
-	@if $filename == linkedin {
+	@if $filename == like {
 		$char: "\E005";
 	}
-	@if $filename == star-filled {
+	@if $filename == linkedin {
 		$char: "\E006";
 	}
-	@if $filename == star {
+	@if $filename == star-filled {
 		$char: "\E007";
 	}
-	@if $filename == upload {
+	@if $filename == star {
 		$char: "\E008";
 	}
-	@if $filename == visitor {
+	@if $filename == upload {
 		$char: "\E009";
+	}
+	@if $filename == visitor {
+		$char: "\E00A";
 	}
 
 	@return $char;
@@ -71,6 +74,10 @@
 
 .icon-arrow-back {
 	@include icon(arrow-back);
+
+}
+.icon-close {
+	@include icon(close);
 
 }
 .icon-facebook {

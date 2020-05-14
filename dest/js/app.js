@@ -299,6 +299,40 @@ var initSwiper = function initSwiper() {
 			$(ev.currentTarget).addClass('is-active');
 		});
 	};
+
+	var exhibitorsSection = function exhibitorsSection() {
+		function _helperClose() {
+			$('html, body').removeClass('is-hideScroll');
+			$('#exhibitors').removeClass('is-open');
+			$('#overlay').removeClass('is-show');
+		}
+
+		$('[exhibitors-btn-js]').on('click', function (ev) {
+			$('html, body').addClass('is-hideScroll');
+			$('#exhibitors').addClass('is-open');
+			$('#overlay').addClass('is-show');
+		});
+
+		$('[exhibitors-close-js]').on('click', function (ev) {
+			_helperClose();
+		});
+
+		$('#overlay').on('click', function (e) {
+			_helperClose();
+		});
+
+		$(document).on('keyup', function (e) {
+			if (e.keyCode === 27) {
+				_helperClose();
+			}
+		});
+
+		$('.exhibitors__box').hover(function (ev) {
+			$(ev.currentTarget).find('.exhibitors__box-btn-wrapper').stop(true).slideDown(350);
+		}, function (ev) {
+			$(ev.currentTarget).find('.exhibitors__box-btn-wrapper').stop(true).slideUp(350);
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -326,6 +360,7 @@ var initSwiper = function initSwiper() {
 		mainHeightSize();
 		perfectScrollbarCB();
 		detailsToggle();
+		exhibitorsSection();
 		// ==========================================
 	};
 	initNative();

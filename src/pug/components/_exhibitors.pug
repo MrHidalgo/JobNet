@@ -1,0 +1,27 @@
+// SECTION :: START
+
+section#exhibitors.exhibitors
+
+	a.exhibitors__close(href="#" exhibitors-close-js)
+		i.icon-font.icon-close
+
+	.exhibitors__head
+		p.exhibitors__title Exhibitors
+
+	.exhibitors__body
+
+		.exhibitors__box-wrapper
+			-for(let i = 0; i < 20; i++)
+				div
+					a.exhibitors__box(href="#")
+						.exhibitors__box-left
+							.exhibitors__box-logo
+								img(src="img/img-logo.png" srcset="img/img-logo@2x.png 2x" alt="")
+						.exhibitors__box-right
+							p.exhibitors__box-title WWF Myanmar
+							p.exhibitors__box-subtitle NGO/UN/Non Profit
+							.exhibitors__box-btn-wrapper
+								button.exhibitors__box-btn(type='button' onclick="return false;") Go to Booth
+
+
+// SECTION :: END

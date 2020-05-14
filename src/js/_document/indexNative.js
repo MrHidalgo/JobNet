@@ -64,6 +64,40 @@
 			$(ev.currentTarget).addClass('is-active');
 		});
 	};
+
+
+	const exhibitorsSection = () => {
+		function _helperClose() {
+			$('html, body').removeClass('is-hideScroll');
+			$('#exhibitors').removeClass('is-open');
+			$('#overlay').removeClass('is-show');
+		}
+
+		$('[exhibitors-btn-js]').on('click', (ev) => {
+			$('html, body').addClass('is-hideScroll');
+			$('#exhibitors').addClass('is-open');
+			$('#overlay').addClass('is-show');
+		});
+
+		$('[exhibitors-close-js]').on('click', (ev) => {
+			_helperClose();
+		});
+
+		$('#overlay').on('click', function (e) {
+			_helperClose();
+		});
+
+		$(document).on('keyup', function(e){
+			if (e.keyCode === 27) {
+				_helperClose();
+			}
+		});
+
+		$('.exhibitors__box').hover(
+			(ev) => {$(ev.currentTarget).find('.exhibitors__box-btn-wrapper').stop(true).slideDown(350);},
+			(ev) => {$(ev.currentTarget).find('.exhibitors__box-btn-wrapper').stop(true).slideUp(350);}
+		);
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -92,6 +126,7 @@
 		mainHeightSize();
 		perfectScrollbarCB();
 		detailsToggle();
+		exhibitorsSection();
 		// ==========================================
 	};
 	initNative();

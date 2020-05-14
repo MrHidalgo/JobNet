@@ -4,8 +4,8 @@ body {
   min-height: 100vh;
 
   &.is-hideScroll {
-    width: 100%;
-    overflow: hidden !important;
+		overflow: hidden !important;
+		width: 100%;
   }
 }
 
