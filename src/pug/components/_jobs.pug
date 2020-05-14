@@ -1,0 +1,32 @@
+// SECTION :: START
+
+section#jobs.jobs
+
+	a.jobs__close(href="#" jobs-close-js)
+		i.icon-font.icon-close
+
+	.jobs__head
+		p.jobs__title Active Jobs
+
+	.jobs__body
+
+		.jobs__box-wrapper
+			-for(let i = 0; i < 20; i++)
+				div
+					a.jobs__box(href="#" jobs-card-js)
+						.jobs__box-left
+							.jobs__box-logo
+								img(src="img/img-logo.png" srcset="img/img-logo@2x.png 2x" alt="")
+						.jobs__box-right
+							p.jobs__box-title WWF Myanmar
+							p.jobs__box-subtitle NGO/UN/Non Profit
+
+					.jobs__box-details
+						p Solutions Consultant (Application Solutions Consultant (Application
+						p Business Analyst ( RPA Consultant ) Business Analyst ( RPA Consultant )
+						p Business Consultant Business Consultant
+						p Mobile Developer Mobile Developer
+						p Managed Service & Trouble Shoo Managed Service & Trouble Shoo
+
+
+// SECTION :: END

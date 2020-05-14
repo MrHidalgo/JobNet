@@ -1,0 +1,60 @@
+// SECTION :: START
+
+section#chat.chat
+
+	a.chat__close(href="#" chat-close-js)
+		i.icon-font.icon-close
+
+	form.chat__form(action='' method='' autocomplete='off')
+
+		.chat__head
+			p.chat__title Active Jobs
+
+		.chat__prehead
+
+			.chat__box
+				.chat__box-left
+					a.chat__box-back(href="#" chat-back-js)
+						i.icon-font.icon-arrow-back
+					.chat__box-logo
+						img(src="img/img-logo-company.jpg" srcset="img/img-logo-company@2x.jpg 2x" alt="")
+				.chat__box-right
+					p.chat__box-title MMOne Online Company
+					p.chat__box-subtitle Internet Services
+
+		.chat__body
+			.chat__body-head
+				.chat__body-ava
+					div
+						img(src="img/img-logo-company.jpg" srcset="img/img-logo-company@2x.jpg 2x" alt="")
+					div
+						img(src="img/img-logo.png" srcset="img/img-logo@2x.png 2x" alt="")
+				p Start Conection with MMOne Online Company
+
+			.chat__body-main
+
+				.chat__box-message
+					div
+						.chat__box-message-ava
+							img(src="img/img-logo.png" srcset="img/img-logo@2x.png 2x" alt="")
+					div
+						.chat__box-message-comm
+							p Hello!
+							p I need a job :)
+
+				.chat__box-message.chat__box-message--reverse
+					div
+						.chat__box-message-ava
+							img(src="img/img-logo-company.jpg" srcset="img/img-logo-company@2x.jpg 2x" alt="")
+					div
+						.chat__box-message-comm
+							p Hello, Justin!
+							p We have a better job for you
+
+		.chat__footer
+			div
+				input(type='text' name='' placeholder='Your text')
+			div
+				button(type='submit') Send
+
+// SECTION :: END

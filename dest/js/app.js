@@ -302,12 +302,14 @@ var initSwiper = function initSwiper() {
 
 	var exhibitorsSection = function exhibitorsSection() {
 		function _helperClose() {
+			$('[exhibitors-btn-js]').removeClass('is-active');
 			$('html, body').removeClass('is-hideScroll');
 			$('#exhibitors').removeClass('is-open');
 			$('#overlay').removeClass('is-show');
 		}
 
 		$('[exhibitors-btn-js]').on('click', function (ev) {
+			$(ev.currentTarget).addClass('is-active');
 			$('html, body').addClass('is-hideScroll');
 			$('#exhibitors').addClass('is-open');
 			$('#overlay').addClass('is-show');
@@ -331,6 +333,54 @@ var initSwiper = function initSwiper() {
 			$(ev.currentTarget).find('.exhibitors__box-btn-wrapper').stop(true).slideDown(350);
 		}, function (ev) {
 			$(ev.currentTarget).find('.exhibitors__box-btn-wrapper').stop(true).slideUp(350);
+		});
+	};
+
+	var jobsSection = function jobsSection() {
+		function _helperClose() {
+			$('html, body').removeClass('is-hideScroll');
+			$('#jobs, #chat').removeClass('is-open is-chat');
+			$('#overlay').removeClass('is-show');
+
+			$('[jobs-btn-js]').removeClass('is-active');
+		}
+		function _helperCloseChat() {
+			$('#jobs').removeClass('is-chat');
+			$('#chat').removeClass('is-open');
+		}
+
+		$('[jobs-btn-js]').on('click', function (ev) {
+			$(ev.currentTarget).addClass('is-active');
+			$('html, body').addClass('is-hideScroll');
+			$('#jobs').addClass('is-open');
+			$('#overlay').addClass('is-show');
+		});
+
+		$('[jobs-card-js]').on('click', function (ev) {
+			$('#jobs').addClass('is-chat');
+			$('#chat').addClass('is-open');
+		});
+
+		$('[chat-close-js]').on('click', function (ev) {
+			_helperCloseChat();
+		});
+
+		$('[chat-back-js]').on('click', function (ev) {
+			_helperCloseChat();
+		});
+
+		$('[jobs-close-js]').on('click', function (ev) {
+			_helperClose();
+		});
+
+		$('#overlay').on('click', function (e) {
+			_helperClose();
+		});
+
+		$(document).on('keyup', function (e) {
+			if (e.keyCode === 27) {
+				_helperClose();
+			}
 		});
 	};
 	/*
@@ -361,6 +411,7 @@ var initSwiper = function initSwiper() {
 		perfectScrollbarCB();
 		detailsToggle();
 		exhibitorsSection();
+		jobsSection();
 		// ==========================================
 	};
 	initNative();
