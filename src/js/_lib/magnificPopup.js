@@ -30,4 +30,12 @@ const initPopups = () => {
     }
   });
 
+  if($('.body-login').length) {
+		$.magnificPopup.open({
+			items: {
+				src: '#loginModal'
+			}
+		});
+	}
+
 };

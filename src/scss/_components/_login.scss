@@ -1,0 +1,24 @@
+// SECTION :: START
+
+.login {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background-image: url('../img/img-login-bg@2x.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&:after {
+		content: '';
+		opacity: 0.45;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #222;
+	}
+}
+
+// SECTION :: END

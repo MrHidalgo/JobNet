@@ -1,0 +1,18 @@
+---
+title: JobNet | Log In
+
+pageClassName: p-login
+bodyClassName: body-login
+---
+extends shared/_layout
+
+block modal
+	include components/_login
+
+block header
+block footer
+
+block content
+	div.body(class!= pageClassName)
+
+		section#login.login

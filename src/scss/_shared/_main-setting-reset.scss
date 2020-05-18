@@ -36,6 +36,10 @@ body {
   min-height: 100vh;
 	padding-top: 66px;
 
+	&.body-login {
+		padding-top: 0;
+	}
+
   > .body {
     display: flex;
     flex-direction: column;

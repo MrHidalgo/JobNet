@@ -4,6 +4,9 @@ PageList:
 - file: index.html
   titleName: Hall
   ready: 55
+- file: login.html
+  titleName: Log In
+  ready: 55
 - file: hall-1.html
   titleName: Booth Hall
   ready: 55
