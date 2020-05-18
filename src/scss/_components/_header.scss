@@ -16,10 +16,23 @@
 		height: 66px;
 		padding-left: 15px;
 		padding-right: 15px;
+		@include adaptive(1535) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 
 		&-left {
 			display: flex;
 			align-items: center;
+			@include adaptive(1439) {
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			> div {
+				display: flex;
+				align-items: center;
+			}
 		}
 
 		&-right {
@@ -27,6 +40,9 @@
 			align-items: center;
 			justify-content: flex-end;
 			height: 100%;
+			@include adaptive(1439) {
+				display: none;
+			}
 		}
 	}
 
@@ -39,9 +55,19 @@
 		&-3 {
 			padding-left: 30px;
 			padding-right: 50px;
+			@include adaptive(1919) {
+				padding-left: 15px;
+				padding-right: 30px;
+			}
+			@include adaptive(1535) {
+				padding-right: 15px;
+			}
 		}
 		&-4 {
 			padding-right: 30px;
+			@include adaptive(1919) {
+				padding-right: 15px;
+			}
 		}
 	}
 
@@ -50,42 +76,12 @@
 		color: #663399;
 		font-family: 'Neuropol', 'Proxima Nova', sans-serif;
 		font-size: 30px;
-	}
-
-	&__btn {
-		outline: none;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 115px;
-		height: 46px;
-		padding-left: 15px;
-		padding-right: 15px;
-		border-style: solid;
-		border-width: 1px;
-		border-color: rgb(220, 220, 220);
-		border-radius: 6px;
-		background-color: rgb(254, 254, 254);
-		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.14);
-		color: #222222;
-		font-size: 18px;
-		font-weight: 600;
-		@include transition(background-color, color);
-
-		&:not(:first-of-type) {
-			margin-left: 10px;
+		@include adaptive(1919) {
+			padding-left: 30px;
+			font-size: 26px;
 		}
-
-		&.is-active,
-		&:hover {
-			background-color: #663399;
-			color: #fefefe;
-			@include transition(background-color, color);
-		}
-
-		&-wrapper {
-			display: flex;
-			align-items: center;
+		@include adaptive(767) {
+			display: none;
 		}
 	}
 
@@ -103,6 +99,12 @@
 
 		&:not(:first-of-type) {
 			margin-left: 40px;
+			@include adaptive(1919) {
+				margin-left: 15px;
+			}
+			@include adaptive(1535) {
+				margin-left: 0;
+			}
 		}
 
 		&:before {
@@ -216,6 +218,13 @@
 
 		&-img {
 			@extend %imageResCoverAbs;
+		}
+	}
+
+	.hamburger {
+		display: none;
+		@include adaptive(1439) {
+			display: flex;
 		}
 	}
 }

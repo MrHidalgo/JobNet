@@ -7,19 +7,19 @@ header#header.header
 		.header__wrapper
 			.header__wrapper-left
 
-				.logo.logo--header
-					a.logo__btn(href="#")
-						img.logo__img(src="img/logo.png" srcset='img/logo@2x.png 2x' alt="")
+				div
+					.logo.logo--header
+						a.logo__btn(href="#")
+							img.logo__img(src="img/logo.png" srcset='img/logo@2x.png 2x' alt="")
 
-				p.header__slogan Singapure Job Expo
+					p.header__slogan Singapure Job Expo
 
-			.header__wrapper-right
+				div
+					+hamburger()
+
+			.header__wrapper-right(mobile-block-js)
 
 				.header__col.header__col-1
-
-					//.header__btn-wrapper
-						//a.header__btn.header__btn--exhibitors(href="#" ) Exhibitors
-						//a.header__btn.header__btn--jobs(href="#" ) Jobs
 
 				.header__col.header__col-2
 

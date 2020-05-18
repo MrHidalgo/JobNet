@@ -3,16 +3,44 @@
 .advertising {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	@include adaptive(1023) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	@include adaptive(767) {
+		padding-top: 10px;
+		padding-bottom: 0;
+	}
+
+	.c-grid-fluid {
+		@include adaptive(767) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
 
 	&__box {
 		width: 100%;
 		max-width: calc(100% / 3);
 		padding-left: 15px;
 		padding-right: 15px;
+		@include adaptive(1023) {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		@include adaptive(767) {
+			max-width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 10px;
+		}
 
 		&-wrapper {
 			display: flex;
 			align-items: center;
+			@include adaptive(767) {
+				flex-direction: column;
+			}
 		}
 	}
 

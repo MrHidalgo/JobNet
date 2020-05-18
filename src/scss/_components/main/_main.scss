@@ -7,6 +7,12 @@
 	flex: 1;
 	min-height: 1px;
 	max-height: 100%;
+	@include adaptive(767) {
+		flex: unset;
+		height: 75vh;
+		min-height: 75vh;
+		max-height: 75vh;
+	}
 
 	&__scroll {
 		opacity: 0;
@@ -20,6 +26,9 @@
 		background-position: top left;
 		background-size: cover;
 		font-size: 0;
+		@include adaptive(767) {
+			opacity: 1 !important;
+		}
 	}
 
 	&__wrapper {
@@ -29,12 +38,22 @@
 
 		&-1 {
 			align-items: flex-end;
+			@include adaptive(767) {
+				align-items: center;
+				height: 25%;
+			}
 		}
 		&-2 {
 			align-items: center;
+			@include adaptive(767) {
+				height: 33%;
+			}
 		}
 		&-3 {
 			align-items: center;
+			@include adaptive(767) {
+				height: 42%;
+			}
 		}
 	}
 
@@ -42,19 +61,32 @@
 		display: flex;
 		align-items: flex-start;
 		height: 100%;
+		@include adaptive(767) {
+			align-items: center;
+		}
 
 		&-wrapper {
 			white-space: nowrap;
 			position: relative;
 			font-size: 0;
+			@include adaptive(767) {
+				height: 100%;
+			}
 
 			&-1 {
 				padding-top: 15px;
 				padding-bottom: 5px;
+				@include adaptive(767) {
+					padding-bottom: 15px;
+				}
 
 				> div {
 					padding-left: 60px;
 					padding-right: 60px;
+					@include adaptive(767) {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
 				}
 			}
 			&-2,
@@ -62,20 +94,34 @@
 				> div {
 					padding-left: 45px;
 					padding-right: 45px;
+					@include adaptive(767) {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
 				}
 			}
 			&-2 {
 				padding-top: 15px;
 				padding-bottom: 5px;
+				@include adaptive(767) {
+					padding-bottom: 15px;
+				}
 			}
 			&-3 {
 				padding-top: 10px;
 				padding-bottom: 10px;
+				@include adaptive(767) {
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
 			}
 
 			> div {
 				display: inline-block;
 				height: 100%;
+				@include adaptive(767) {
+					vertical-align: middle;
+				}
 			}
 		}
 	}

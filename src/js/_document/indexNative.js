@@ -32,18 +32,36 @@
 			$('#main .main__box-wrapper-3').css({height: _wrapper3Height});
 		}
 
-		$(window).on('load', () => {
-			setTimeout((ev) => {
+		if($(window).width() > 767) {
+			$(window).on('load', () => {
+				setTimeout((ev) => {
+					_helperResize();
+
+					_main.animate({
+						opacity: 1
+					}, 750);
+				}, 200);
+			});
+		} else {
+			_main.animate({
+				opacity: 1
+			}, 750);
+		}
+
+		$(window).on('resize', (ev) => {
+			if($(window).width() > 767) {
 				_helperResize();
 
 				_main.animate({
 					opacity: 1
 				}, 750);
-			}, 200);
-		});
+			} else {
+				_main.attr('style', '');
 
-		$(window).on('resize', (ev) => {
-			_helperResize();
+				$('#main .main__box-wrapper-1').attr('style', '');
+				$('#main .main__box-wrapper-2').attr('style', '');
+				$('#main .main__box-wrapper-3').attr('style', '');
+			}
 		});
 	};
 
