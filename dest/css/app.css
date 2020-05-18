@@ -1196,6 +1196,11 @@ picture {
 /* line 3, src/scss/_components/_exhibitors.scss */
 .exhibitors {
   z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   overflow: hidden;
   position: fixed;
   top: 85px;
@@ -1512,6 +1517,11 @@ picture {
 /* line 3, src/scss/_components/_jobs.scss */
 .jobs {
   z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   overflow: hidden;
   position: fixed;
   top: 85px;
