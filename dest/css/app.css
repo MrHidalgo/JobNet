@@ -1138,7 +1138,7 @@ picture {
 
 /* line 3, src/scss/_components/_header.scss */
 .header {
-  z-index: 1000;
+  z-index: 1999;
   position: fixed;
   top: 0;
   left: 0;
