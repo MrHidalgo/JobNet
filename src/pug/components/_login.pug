@@ -1,0 +1,52 @@
+// SECTION :: START
+
+mixin modalContent()
+	.c-modal__header
+		p.c-modal__title Job Seeker Event Login
+
+	.c-modal__body
+
+		form.c-modal__form(action='' method='' autocomplete='off')
+			.c-modal__form-field
+				label.c-modal__form-label(for='')
+					i.icon-font.icon-writing
+					span Event Name
+				select.c-modal__form-select(name='' id='')
+					option(value='' selected disabled) Singapure Job Expo
+					option(value='') Action 1
+					option(value='') Action 2
+			.c-modal__form-field
+				label.c-modal__form-label(for='')
+					i.icon-font.icon-email
+					span Email
+				input.c-modal__form-input(type='email' name='' id='' placeholder='Email')
+			.c-modal__form-field
+				label.c-modal__form-label(for='')
+					i.icon-font.icon-padlock
+					span Password
+				input.c-modal__form-input(type='password' name='' id='' placeholder='Password')
+			.c-modal__form-field.c-modal__form-field--link
+				a.c-modal__form-link(href="#") Forgot Password?
+			.c-modal__form-field.c-modal__form-field--btn
+				button.c-modal__form-btn(type='submit')
+					span Log In
+
+			p.c-modal__subbtitle
+				span or
+
+			.c-modal__btn-wrapper
+				a.c-modal__btn.c-modal__btn--facebook(href="#")
+					i.icon-font.icon-facebook
+					span Log In with Facebook
+				a.c-modal__btn.c-modal__btn--google(href="#")
+					img(src="img/google.svg" alt="")
+					span Log In with Google
+
+			p.c-modal__info Don’t have an account?
+			a.c-modal__link(href="#") Register Free
+
+	.c-modal__footer
+
++modal('loginModal', 'modalContent')
+
+// SECTION :: END

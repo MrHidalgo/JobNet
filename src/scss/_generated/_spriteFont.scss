@@ -33,35 +33,44 @@
 	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == enter {
+	@if $filename == email {
 		$char: "\E003";
 	}
-	@if $filename == facebook {
+	@if $filename == enter {
 		$char: "\E004";
 	}
-	@if $filename == highlighter {
+	@if $filename == facebook {
 		$char: "\E005";
 	}
-	@if $filename == like {
+	@if $filename == highlighter {
 		$char: "\E006";
 	}
-	@if $filename == linkedin {
+	@if $filename == like {
 		$char: "\E007";
 	}
-	@if $filename == search {
+	@if $filename == linkedin {
 		$char: "\E008";
 	}
-	@if $filename == star-filled {
+	@if $filename == padlock {
 		$char: "\E009";
 	}
-	@if $filename == star {
+	@if $filename == search {
 		$char: "\E00A";
 	}
-	@if $filename == upload {
+	@if $filename == star-filled {
 		$char: "\E00B";
 	}
-	@if $filename == visitor {
+	@if $filename == star {
 		$char: "\E00C";
+	}
+	@if $filename == upload {
+		$char: "\E00D";
+	}
+	@if $filename == visitor {
+		$char: "\E00E";
+	}
+	@if $filename == writing {
+		$char: "\E00F";
 	}
 
 	@return $char;
@@ -86,6 +95,10 @@
 	@include icon(close);
 
 }
+.icon-email {
+	@include icon(email);
+
+}
 .icon-enter {
 	@include icon(enter);
 
@@ -106,6 +119,10 @@
 	@include icon(linkedin);
 
 }
+.icon-padlock {
+	@include icon(padlock);
+
+}
 .icon-search {
 	@include icon(search);
 
@@ -124,5 +141,9 @@
 }
 .icon-visitor {
 	@include icon(visitor);
+
+}
+.icon-writing {
+	@include icon(writing);
 
 }

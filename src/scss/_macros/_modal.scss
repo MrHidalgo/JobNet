@@ -1,6 +1,212 @@
 // MODAL :: START
 
 .c-modal {
+	&#loginModal {
+		max-width: 510px;
+		padding: 40px;
+
+		.mfp-close {
+			opacity: 1;
+			color: #222222;
+			font-size: 34px;
+		}
+
+		.c-modal {
+			&__header {
+				display: flex;
+				justify-content: center;
+				padding-bottom: 20px;
+			}
+
+			&__body {}
+
+			&__footer {}
+
+			&__title {
+				color: #663399;
+				text-align: center;
+				font-size: 24px;
+				font-weight: 600;
+			}
+
+			&__form {
+				display: flex;
+				flex-direction: column;
+
+				&-field {
+					padding-bottom: 10px;
+
+					&--link {
+						display: flex;
+						justify-content: flex-end;
+					}
+				}
+
+				&-label {
+					display: flex;
+					align-items: center;
+					padding-bottom: 7px;
+
+					.icon-font {
+						margin-right: 10px;
+						color: #6e6e6e;
+						font-size: 16px;
+					}
+
+					span {
+						font-size: 14px;
+						color: rgb(34, 34, 34);
+					}
+				}
+
+				&-select,
+				&-input {
+					outline: none;
+					width: 100%;
+					height: 50px;
+					padding: 0 15px;
+					box-shadow: none;
+					border-style: solid;
+					border-width: 1px;
+					border-color: rgb(220, 220, 220);
+					border-radius: 6px;
+					background-color: rgb(255, 255, 255);
+					font-size: 13px;
+					color: #000;
+					@include inputPlaceholder {
+						font-size: 13px;
+						color: rgb(110, 110, 110);
+					}
+				}
+
+				&-link {
+					display: flex;
+					font-size: 12px;
+					color: rgb(68, 94, 233);
+				}
+
+				&-btn {
+					outline: none;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 46px;
+					border-radius: 6px;
+					border: none;
+					background-color: rgb(26, 200, 128);
+					box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+
+					span {
+						font-weight: 600;
+						font-size: 18px;
+						color: rgb(255, 255, 255);
+					}
+				}
+			}
+
+			&__subbtitle {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: #dcdcdc;
+				}
+
+				span {
+					z-index: 2;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 30px;
+					height: 30px;
+					background-color: #ffffff;
+					font-size: 14px;
+					color: rgb(34, 34, 34);
+				}
+			}
+
+			&__btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				max-width: calc((100% - 10px) / 2);
+				height: 45px;
+
+				&.c-modal__btn--facebook {
+					border-radius: 6px;
+					background-color: rgb(59, 89, 152);
+					box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+
+					span {
+						color: #ffffff;
+					}
+				}
+
+				&--google {
+					border-style: solid;
+					border-width: 1px;
+					border-color: rgb(234, 234, 234);
+					border-radius: 6px;
+					background-color: rgb(249, 249, 249);
+					box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+				}
+
+				&-wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding-bottom: 40px;
+				}
+
+				.icon-font {
+					color: #ffffff;
+					font-size: 24px;
+				}
+
+				img {
+					display: block;
+					width: 24px;
+					height: 25px;
+				}
+
+				span {
+					padding-left: 10px;
+					color: #222222;
+					font-weight: 600;
+					font-size: 14px;
+				}
+			}
+
+			&__info {
+				padding-bottom: 10px;
+				text-align: center;
+				font-size: 14px;
+				color: rgb(34, 34, 34);
+			}
+
+			&__link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-weight: 600;
+				color: rgb(102, 51, 153);
+			}
+		}
+	}
+
 	&#galleryModal,
 	&#videoModal,
 	&#testimonialsModal {
