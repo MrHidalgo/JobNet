@@ -69,3 +69,5 @@
 @include mixinFontFace("ProximaNova", "-Bold", "../fonts/", bold, woff2 woff ttf svg);
 @include mixinFontFace("ProximaNova", "-Light", "../fonts/", 300, woff2 woff ttf svg);
 @include mixinFontFace("ProximaNova", "-Semibold", "../fonts/", 600, woff2 woff ttf svg);
+
+@include mixinFontFace("Neuropol", "", "../fonts/", normal, woff2 woff ttf svg);

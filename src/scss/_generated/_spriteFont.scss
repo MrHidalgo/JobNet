@@ -33,29 +33,35 @@
 	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == facebook {
+	@if $filename == enter {
 		$char: "\E003";
 	}
-	@if $filename == highlighter {
+	@if $filename == facebook {
 		$char: "\E004";
 	}
-	@if $filename == like {
+	@if $filename == highlighter {
 		$char: "\E005";
 	}
-	@if $filename == linkedin {
+	@if $filename == like {
 		$char: "\E006";
 	}
-	@if $filename == star-filled {
+	@if $filename == linkedin {
 		$char: "\E007";
 	}
-	@if $filename == star {
+	@if $filename == search {
 		$char: "\E008";
 	}
-	@if $filename == upload {
+	@if $filename == star-filled {
 		$char: "\E009";
 	}
-	@if $filename == visitor {
+	@if $filename == star {
 		$char: "\E00A";
+	}
+	@if $filename == upload {
+		$char: "\E00B";
+	}
+	@if $filename == visitor {
+		$char: "\E00C";
 	}
 
 	@return $char;
@@ -80,6 +86,10 @@
 	@include icon(close);
 
 }
+.icon-enter {
+	@include icon(enter);
+
+}
 .icon-facebook {
 	@include icon(facebook);
 
@@ -94,6 +104,10 @@
 }
 .icon-linkedin {
 	@include icon(linkedin);
+
+}
+.icon-search {
+	@include icon(search);
 
 }
 .icon-star-filled {

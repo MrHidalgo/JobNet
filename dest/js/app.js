@@ -132,60 +132,6 @@ var initSmoothScroll = function initSmoothScroll() {
 	});
 };
 
-/**
- * @name initStellar
- * @description Stellar.js is a jQuery plugin that provides parallax scrolling effects to any scrolling element.
- *
- * Parallax Elements
- * - data-stellar-ratio="1"
- *
- * Parallax Backgrounds
- * - data-stellar-background-ratio="1"
- */
-var initStellar = function initStellar() {
-	if ($("[parallax-js]").length) {
-		$(function () {
-			$.stellar({
-				// Set scrolling to be in either one or both directions
-				horizontalScrolling: true,
-				verticalScrolling: false,
-
-				// Set the global alignment offsets
-				horizontalOffset: 0,
-				verticalOffset: 0,
-
-				// Refreshes parallax content on window load and resize
-				responsive: true,
-
-				// Select which property is used to calculate scroll.
-				// Choose 'scroll', 'position', 'margin' or 'transform',
-				// or write your own 'scrollProperty' plugin.
-				scrollProperty: 'scroll',
-
-				// Select which property is used to position elements.
-				// Choose between 'position' or 'transform',
-				// or write your own 'positionProperty' plugin.
-				positionProperty: 'transform',
-
-				// Enable or disable the two types of parallax
-				parallaxBackgrounds: true,
-				parallaxElements: true,
-
-				// Hide parallax elements that move outside the viewport
-				hideDistantElements: false,
-
-				// Customise how elements are shown and hidden
-				hideElement: function hideElement($elem) {
-					$elem.hide();
-				},
-				showElement: function showElement($elem) {
-					$elem.show();
-				}
-			});
-		});
-	}
-};
-
 var gallerySliderOpt = {},
     gallerySlider = null,
     videoSliderOpt = {},
@@ -309,10 +255,16 @@ var initSwiper = function initSwiper() {
 		}
 
 		$('[exhibitors-btn-js]').on('click', function (ev) {
-			$(ev.currentTarget).addClass('is-active');
 			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
 			$('#exhibitors').addClass('is-open');
 			$('#overlay').addClass('is-show');
+
+			$('#jobs').removeClass('is-open is-chat');
+			$('#chat').removeClass('is-open');
 		});
 
 		$('[exhibitors-close-js]').on('click', function (ev) {
@@ -350,10 +302,15 @@ var initSwiper = function initSwiper() {
 		}
 
 		$('[jobs-btn-js]').on('click', function (ev) {
-			$(ev.currentTarget).addClass('is-active');
 			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
 			$('#jobs').addClass('is-open');
 			$('#overlay').addClass('is-show');
+
+			$('#exhibitors').removeClass('is-open');
 		});
 
 		$('[jobs-card-js]').on('click', function (ev) {
@@ -402,7 +359,6 @@ var initSwiper = function initSwiper() {
 		initHeaderFixed();
 		initPopups();
 		initSmoothScroll();
-		initStellar();
 		initSwiper();
 		// ==========================================
 

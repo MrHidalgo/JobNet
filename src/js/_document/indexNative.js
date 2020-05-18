@@ -75,10 +75,16 @@
 		}
 
 		$('[exhibitors-btn-js]').on('click', (ev) => {
-			$(ev.currentTarget).addClass('is-active');
 			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
 			$('#exhibitors').addClass('is-open');
 			$('#overlay').addClass('is-show');
+
+			$('#jobs').removeClass('is-open is-chat');
+			$('#chat').removeClass('is-open');
 		});
 
 		$('[exhibitors-close-js]').on('click', (ev) => {
@@ -116,10 +122,15 @@
 		}
 
 		$('[jobs-btn-js]').on('click', (ev) => {
-			$(ev.currentTarget).addClass('is-active');
 			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
 			$('#jobs').addClass('is-open');
 			$('#overlay').addClass('is-show');
+
+			$('#exhibitors').removeClass('is-open');
 		});
 
 		$('[jobs-card-js]').on('click', (ev) => {
@@ -169,7 +180,6 @@
 		initHeaderFixed();
 		initPopups();
 		initSmoothScroll();
-		initStellar();
 		initSwiper();
 		// ==========================================
 
