@@ -6,13 +6,62 @@ bodyClassName: body-login
 ---
 extends shared/_layout
 
-block modal
-	include components/_login
-
 block header
 block footer
 
 block content
 	div.body(class!= pageClassName)
 
-		section#login.login
+		section#loginModal.login.c-modal
+
+			.c-modal__content
+				.c-modal__header
+
+					.logo.logo--header
+						a.logo__btn(href="#")
+							img.logo__img(src="img/logo.png" srcset='img/logo@2x.png 2x' alt="")
+
+					p.c-modal__title Job Seeker Event Login
+
+				.c-modal__body
+
+					form.c-modal__form(action='' method='' autocomplete='off')
+						.c-modal__form-field
+							label.c-modal__form-label(for='select-job')
+								i.icon-font.icon-writing
+								span Event Name
+							select.c-modal__form-select(name='' id='select-job')
+								option(value='' selected disabled) Singapure Job Expo
+								option(value='') Action 1
+								option(value='') Action 2
+						.c-modal__form-field
+							label.c-modal__form-label(for='from-email')
+								i.icon-font.icon-email
+								span Email
+							input.c-modal__form-input(type='email' name='' id='from-email' placeholder='Email')
+						.c-modal__form-field
+							label.c-modal__form-label(for='from-password')
+								i.icon-font.icon-padlock
+								span Password
+							input.c-modal__form-input(type='password' name='' id='from-password' placeholder='Password')
+						.c-modal__form-field.c-modal__form-field--link
+							a.c-modal__form-link(href="#") Forgot Password?
+						.c-modal__form-field.c-modal__form-field--btn
+							button.c-modal__form-btn(type='submit')
+								span Log In
+
+						p.c-modal__subbtitle
+							span or
+
+						.c-modal__btn-wrapper
+							a.c-modal__btn.c-modal__btn--facebook(href="#")
+								i.icon-font.icon-facebook
+								span Log In with Facebook
+							a.c-modal__btn.c-modal__btn--google(href="#")
+								img(src="img/google.svg" alt="")
+								span Log In with Google
+
+						p.c-modal__info Don’t have an account?
+						a.c-modal__link(href="#") Register Free
+
+				.c-modal__footer
