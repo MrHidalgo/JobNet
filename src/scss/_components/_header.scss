@@ -44,16 +44,56 @@
 			justify-content: flex-end;
 			height: 100%;
 			@include adaptive(1439) {
-				display: none;
+				overflow-y: auto;
+				opacity: 0;
+				visibility: hidden;
+				transform: translateX(-100%);
+				z-index: 1100;
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-direction: column;
+				width: 318px;
+				height: 100vh;
+				background-color: #ffffff;
+				box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.3);
+				@include transition(opacity, visibility, transform);
+
+				&.is-open {
+					opacity: 1;
+					visibility: visible;
+					transform: translateX(0);
+					@include transition(opacity, visibility, transform);
+				}
+			}
+			@include adaptive(767) {
+				width: 100%;
 			}
 		}
 	}
 
 	&__col {
+		@include adaptive(1439) {
+			width: 100%;
+		}
+
+		&-1 {
+			display: none;
+		}
 		&-2 {
 			display: flex;
 			align-items: center;
 			height: 100%;
+			@include adaptive(1439) {
+				order: 4;
+				flex-direction: column;
+				align-items: flex-start;
+				height: auto;
+				padding: 0 35px 20px;
+			}
 		}
 		&-3 {
 			padding-left: 30px;
@@ -65,11 +105,32 @@
 			@include adaptive(1535) {
 				padding-right: 15px;
 			}
+			@include adaptive(1439) {
+				order: 1;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				height: 66px;
+				border-bottom: 2px solid #dcdcdc;
+			}
 		}
 		&-4 {
 			padding-right: 30px;
 			@include adaptive(1919) {
 				padding-right: 15px;
+			}
+			@include adaptive(1439) {
+				order: 3;
+				padding: 0 35px 10px;
+			}
+		}
+		&-5 {
+			@include adaptive(1439) {
+				order: 2;
+				display: flex;
+				align-items: center;
+				padding: 20px 35px;
 			}
 		}
 	}
@@ -99,6 +160,11 @@
 		font-size: 18px;
 		font-weight: 600;
 		@include transition(color);
+		@include adaptive(1439) {
+			width: 100%;
+			height: 55px;
+			border-top: 1px solid #eaeaea;
+		}
 
 		&:not(:first-of-type) {
 			margin-left: 40px;
@@ -221,6 +287,65 @@
 
 		&-img {
 			@extend %imageResCoverAbs;
+		}
+
+		&-text {
+			display: none;
+			@include adaptive(1439) {
+				display: flex;
+				padding-left: 20px;
+				color: #222222;
+				font-weight: 600;
+				font-size: 18px;
+			}
+		}
+
+		&-name {
+			display: flex;
+			flex-direction: column;
+			padding-left: 20px;
+
+			p,
+			span {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			p {
+				color: #222222;
+				font-weight: 600;
+				font-size: 18px;
+			}
+
+			span {
+				color: #6e6e6e;
+				font-size: 14px;
+			}
+		}
+
+		&-login {
+			display: none;
+			//display: flex;
+			//align-items: center;
+		}
+
+		&-unlogin {
+			display: flex;
+			align-items: center;
+			//display: none;
+		}
+	}
+
+	&__close {
+		display: none;
+		@include adaptive(767) {
+			display: flex;
+		}
+
+		.icon-font {
+			color: #6e6e6e;
+			font-size: 14px;
 		}
 	}
 

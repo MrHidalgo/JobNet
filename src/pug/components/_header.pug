@@ -9,7 +9,7 @@ header#header.header
 
 				div
 					.logo.logo--header
-						a.logo__btn(href="#")
+						a.logo__btn(href="/")
 							img.logo__img(src="img/logo.png" srcset='img/logo@2x.png 2x' alt="")
 
 					p.header__slogan Singapure Job Expo
@@ -34,6 +34,9 @@ header#header.header
 					a.header__lang(href="#")
 						img(src="img/myanmar.svg" alt="")
 
+					a.header__close(href="#" close-menu-js)
+						i.icon-font.icon-close
+
 				.header__col.header__col-4
 
 					a.header__upload(href="#")
@@ -42,8 +45,18 @@ header#header.header
 
 				.header__col.header__col-5
 
-					a.header__user(href="#loginModal" data-effect='mfp-zoom-in' popup-js)
-						i.icon-font.icon-enter
-						//img.header__user-img(src="img/img-user.png" srcset='img/img-user@2x.png 2x' alt="")
+					.header__user-unlogin
+						a.header__user(href="#loginModal" data-effect='mfp-zoom-in' popup-js)
+							i.icon-font.icon-enter
+
+						p.header__user-text Event Login
+
+					.header__user-login
+						a.header__user(href="#")
+							img.header__user-img(src="img/img-user.png" srcset='img/img-user@2x.png 2x' alt="")
+
+						.header__user-name
+							p Justin Sway
+							span justinsway@mmone.com.mm
 
 // HEADER :: END
