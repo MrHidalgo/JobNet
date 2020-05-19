@@ -358,6 +358,13 @@ var initSwiper = function initSwiper() {
 			}
 		});
 	};
+
+	var vacanciesCollapse = function vacanciesCollapse() {
+		$('[vacancies-head-js]').on('click', function (ev) {
+			ev.preventDefault();
+			$(ev.currentTarget).siblings('[vacancies-body-js]').slideToggle(350).css({ display: 'flex' });
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -386,6 +393,7 @@ var initSwiper = function initSwiper() {
 		detailsToggle();
 		exhibitorsSection();
 		jobsSection();
+		vacanciesCollapse();
 		// ==========================================
 	};
 	initNative();

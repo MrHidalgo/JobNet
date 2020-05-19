@@ -178,6 +178,14 @@
 			}
 		});
 	};
+
+
+	const vacanciesCollapse = () => {
+		$('[vacancies-head-js]').on('click', (ev) => {
+			ev.preventDefault();
+			$(ev.currentTarget).siblings('[vacancies-body-js]').slideToggle(350).css({display: 'flex'});
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -207,6 +215,7 @@
 		detailsToggle();
 		exhibitorsSection();
 		jobsSection();
+		vacanciesCollapse();
 		// ==========================================
 	};
 	initNative();

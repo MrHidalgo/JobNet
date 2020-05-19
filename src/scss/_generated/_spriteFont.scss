@@ -33,44 +33,47 @@
 	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == email {
+	@if $filename == drop-down {
 		$char: "\E003";
 	}
-	@if $filename == enter {
+	@if $filename == email {
 		$char: "\E004";
 	}
-	@if $filename == facebook {
+	@if $filename == enter {
 		$char: "\E005";
 	}
-	@if $filename == highlighter {
+	@if $filename == facebook {
 		$char: "\E006";
 	}
-	@if $filename == like {
+	@if $filename == highlighter {
 		$char: "\E007";
 	}
-	@if $filename == linkedin {
+	@if $filename == like {
 		$char: "\E008";
 	}
-	@if $filename == padlock {
+	@if $filename == linkedin {
 		$char: "\E009";
 	}
-	@if $filename == search {
+	@if $filename == padlock {
 		$char: "\E00A";
 	}
-	@if $filename == star-filled {
+	@if $filename == search {
 		$char: "\E00B";
 	}
-	@if $filename == star {
+	@if $filename == star-filled {
 		$char: "\E00C";
 	}
-	@if $filename == upload {
+	@if $filename == star {
 		$char: "\E00D";
 	}
-	@if $filename == visitor {
+	@if $filename == upload {
 		$char: "\E00E";
 	}
-	@if $filename == writing {
+	@if $filename == visitor {
 		$char: "\E00F";
+	}
+	@if $filename == writing {
+		$char: "\E010";
 	}
 
 	@return $char;
@@ -93,6 +96,10 @@
 }
 .icon-close {
 	@include icon(close);
+
+}
+.icon-drop-down {
+	@include icon(drop-down);
 
 }
 .icon-email {

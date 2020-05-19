@@ -36,6 +36,9 @@
 			> div {
 				width: 100%;
 				max-width: calc((100% - (40px * 2)) / 3);
+				@include adaptive(1279) {
+					max-width: calc((100% - (20px * 2)) / 3);
+				}
 			}
 		}
 	}

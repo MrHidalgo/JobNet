@@ -3,12 +3,36 @@
 .vacancies {
 	padding-bottom: 30px;
 
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 30px;
+
+		.section__title {
+			padding-bottom: 0;
+		}
+
+		a {
+			display: none;
+			color: #1155cc;
+			font-weight: 600;
+			font-size: 14px;
+			@include adaptive(1023) {
+				display: flex;
+			}
+		}
+	}
+
 	&__table {
 		overflow: hidden;
 		position: relative;
 		border: 1px solid #CCCCCC;
 		border-radius: 8px;
 		background-color: rgb(255, 255, 255);
+		@include adaptive(1023) {
+			border-radius: 0;
+		}
 
 		&-head {
 			display: flex;
@@ -18,6 +42,9 @@
 			padding-bottom: 7px;
 			background-color: #f9f7fb;
 			border-bottom: 1px solid #CCCCCC;
+			@include adaptive(1023) {
+				display: none;
+			}
 		}
 
 		&-body {
@@ -34,6 +61,106 @@
 			display: flex;
 			align-items: center;
 			width: 100%;
+			@include adaptive(1023) {
+				flex-direction: column;
+			}
+
+			&-head,
+			&-body {
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
+			&-head {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+
+				.vacancies__table-td {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border-right: 1px solid #CCCCCC;
+					@include adaptive(1023) {
+						height: 60px;
+						border: none;
+
+						a {
+							font-size: 16px;
+						}
+					}
+
+					.icon-font {
+						display: none;
+						color: #6e6e6e;
+						font-size: 6px;
+						@include adaptive(1023) {
+							display: flex;
+						}
+					}
+				}
+			}
+
+			&-body {
+				max-width: calc(189px + 74px + (161px * 3) + 169px);
+				@include adaptive(1279) {
+					max-width: calc(189px + 74px + (120px * 3) + 169px);
+				}
+				@include adaptive(1023) {
+					display: none;
+					flex-direction: column;
+					max-width: 100%;
+				}
+
+				.vacancies__table-td {
+					@include adaptive(1023) {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						height: 50px;
+					}
+
+					&:last-of-type {
+						@include adaptive(1023) {
+							height: 60px;
+						}
+
+						a {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 100%;
+							height: 33px;
+							border-style: solid;
+							border-width: 1px;
+							border-color: rgb(220, 220, 220);
+							border-radius: 6px;
+							background-color: rgb(254, 254, 254);
+							box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.14);
+							color: #663399;
+							font-size: 15px;
+							font-weight: 600;
+							@include transition(box-shadow);
+
+							&:hover {
+								box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+								@include transition(box-shadow);
+							}
+						}
+					}
+
+					p {
+						display: none;
+						@include adaptive(1023) {
+							display: flex;
+							color: #663399;
+							font-weight: 600;
+							font-size: 14px;
+						}
+					}
+				}
+			}
 		}
 
 		&-th,
@@ -46,9 +173,19 @@
 			padding-left: 17px;
 			padding-right: 17px;
 			text-align: center;
+			@include adaptive(1023) {
+				text-align: left;
+			}
+
+			&:first-of-type {
+				text-align: left;
+			}
 
 			&:not(:last-of-type) {
 				border-right: 1px solid #CCCCCC;
+				@include adaptive(1023) {
+					border: none;
+				}
 			}
 
 			&-1 {
@@ -62,16 +199,39 @@
 			&-3 {
 				justify-content: center;
 				max-width: 74px;
+				@include adaptive(1023) {
+					justify-content: flex-start;
+				}
 			}
 			&-4,
 			&-5,
 			&-6 {
 				justify-content: center;
 				max-width: 161px;
+				@include adaptive(1279) {
+					max-width: 120px;
+				}
+				@include adaptive(1023) {
+					justify-content: flex-start;
+				}
 			}
 			&-7 {
 				justify-content: flex-end;
 				max-width: 169px;
+				@include adaptive(1023) {
+					justify-content: flex-start;
+				}
+			}
+
+			&-2,
+			&-3,
+			&-4,
+			&-5,
+			&-6,
+			&-7 {
+				@include adaptive(1023) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -97,32 +257,6 @@
 			a {
 				color: #445ee9;
 			}
-
-			&:last-of-type {
-				a {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: 100%;
-					height: 33px;
-					border-style: solid;
-					border-width: 1px;
-					border-color: rgb(220, 220, 220);
-					border-radius: 6px;
-					background-color: rgb(254, 254, 254);
-					box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.14);
-					color: #663399;
-					font-size: 15px;
-					font-weight: 600;
-					@include transition(box-shadow);
-
-					&:hover {
-						box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
-						@include transition(box-shadow);
-					}
-				}
-			}
-
 		}
 	}
 }
