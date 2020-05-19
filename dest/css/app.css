@@ -3868,7 +3868,7 @@ picture {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding: 50px 15px 30px;
+    padding: 75px 15px 15px;
   }
 }
 
