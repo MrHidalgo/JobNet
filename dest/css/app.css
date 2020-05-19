@@ -3506,14 +3506,8 @@ picture {
 
 /* line 60, src/scss/_components/main/_main.scss */
 .main__box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  display: inline-block;
+  width: auto;
   height: 100%;
 }
 
@@ -3527,7 +3521,7 @@ picture {
   }
 }
 
-/* line 68, src/scss/_components/main/_main.scss */
+/* line 69, src/scss/_components/main/_main.scss */
 .main__box-wrapper {
   white-space: nowrap;
   position: relative;
@@ -3535,94 +3529,89 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 68, src/scss/_components/main/_main.scss */
+  /* line 69, src/scss/_components/main/_main.scss */
   .main__box-wrapper {
     height: 100%;
   }
 }
 
-/* line 76, src/scss/_components/main/_main.scss */
+/* line 77, src/scss/_components/main/_main.scss */
 .main__box-wrapper-1 {
   padding-top: 15px;
   padding-bottom: 5px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 76, src/scss/_components/main/_main.scss */
+  /* line 77, src/scss/_components/main/_main.scss */
   .main__box-wrapper-1 {
     padding-bottom: 15px;
   }
 }
 
-/* line 83, src/scss/_components/main/_main.scss */
+/* line 84, src/scss/_components/main/_main.scss */
 .main__box-wrapper-1 > div {
   padding-left: 60px;
   padding-right: 60px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 83, src/scss/_components/main/_main.scss */
+  /* line 84, src/scss/_components/main/_main.scss */
   .main__box-wrapper-1 > div {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-/* line 94, src/scss/_components/main/_main.scss */
+/* line 95, src/scss/_components/main/_main.scss */
 .main__box-wrapper-2 > div, .main__box-wrapper-3 > div {
   padding-left: 45px;
   padding-right: 45px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 94, src/scss/_components/main/_main.scss */
+  /* line 95, src/scss/_components/main/_main.scss */
   .main__box-wrapper-2 > div, .main__box-wrapper-3 > div {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-/* line 103, src/scss/_components/main/_main.scss */
+/* line 104, src/scss/_components/main/_main.scss */
 .main__box-wrapper-2 {
   padding-top: 15px;
   padding-bottom: 5px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 103, src/scss/_components/main/_main.scss */
+  /* line 104, src/scss/_components/main/_main.scss */
   .main__box-wrapper-2 {
     padding-bottom: 15px;
   }
 }
 
-/* line 110, src/scss/_components/main/_main.scss */
+/* line 111, src/scss/_components/main/_main.scss */
 .main__box-wrapper-3 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 110, src/scss/_components/main/_main.scss */
+  /* line 111, src/scss/_components/main/_main.scss */
   .main__box-wrapper-3 {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
 
-/* line 119, src/scss/_components/main/_main.scss */
+/* line 120, src/scss/_components/main/_main.scss */
 .main__box-wrapper > div {
   display: inline-block;
+  vertical-align: middle;
+  width: auto;
   height: 100%;
 }
 
-@media screen and (max-width: 767px) {
-  /* line 119, src/scss/_components/main/_main.scss */
-  .main__box-wrapper > div {
-    vertical-align: middle;
-  }
-}
-
-/* line 129, src/scss/_components/main/_main.scss */
+/* line 132, src/scss/_components/main/_main.scss */
 .main__img {
   display: block;
   max-width: 100%;
