@@ -7,12 +7,19 @@
 		display: flex;
 		flex-direction: column;
 		padding: 30px;
+		@include adaptive(767) {
+			padding: 20px 15px;
+		}
 
 		&-top {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			padding-bottom: 20px;
+
+			.section__link {
+				text-align: right;
+			}
 		}
 	}
 
@@ -28,6 +35,9 @@
 		border-radius: 8px;
 		background-color: rgb(255, 255, 255);
 		transform: translateZ(0);
+		@include adaptive(767) {
+			padding: 15px;
+		}
 
 		&-wrapper {
 			display: flex;
@@ -36,6 +46,13 @@
 			> div {
 				width: 100%;
 				max-width: calc((100% - (10px * 2)) / 2);
+				@include adaptive(767) {
+					max-width: 100%;
+
+					&:nth-of-type(2) {
+						display: none;
+					}
+				}
 			}
 		}
 
@@ -43,10 +60,16 @@
 			display: flex;
 			align-items: center;
 			padding-bottom: 20px;
+			@include adaptive(767) {
+				align-items: flex-start;
+			}
 
 			> div {
 				&:nth-of-type(1) {
 					padding-right: 32px;
+					@include adaptive(767) {
+						padding-right: 15px;
+					}
 				}
 				&:nth-of-type(2) {
 					flex: 1;
@@ -63,6 +86,14 @@
 			height: 70px;
 			border-radius: 50%;
 			background-color: #ffffff;
+			@include adaptive(767) {
+				width: 50px;
+				height: 50px;
+			}
+
+			img {
+				@extend %imageResCoverAbs;
+			}
 		}
 
 		&-name {

@@ -10,6 +10,9 @@
 		@include adaptive(1023) {
 			padding-bottom: 10px;
 		}
+		@include adaptive(767) {
+			padding: 20px 15px 0;
+		}
 
 		&-top {
 			display: flex;
@@ -33,6 +36,9 @@
 		transform: translateZ(0);
 		@include adaptive(1279) {
 			height: 221px;
+		}
+		@include adaptive(767) {
+			height: 131px;
 		}
 
 		&:hover {

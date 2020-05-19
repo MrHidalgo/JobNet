@@ -7,6 +7,9 @@
 		display: flex;
 		flex-direction: column;
 		padding: 30px;
+		@include adaptive(767) {
+			padding: 20px 15px 10px;
+		}
 
 		&-top {
 			display: flex;
@@ -29,6 +32,9 @@
 		border-radius: 8px;
 		background-color: rgb(255, 255, 255);
 		@include transition(box-shadow);
+		@include adaptive(767) {
+			width: 100%;
+		}
 
 		&:hover {
 			box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.14);
@@ -51,9 +57,17 @@
 			left: -30px;
 			display: flex;
 			flex-wrap: wrap;
+			@include adaptive(767) {
+				left: 0;
+			}
 
 			> div {
 				padding-left: 30px;
+				@include adaptive(767) {
+					width: 100%;
+					padding-left: 0;
+					padding-bottom: 10px;
+				}
 			}
 		}
 

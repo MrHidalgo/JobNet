@@ -80,6 +80,13 @@
 		@include adaptive(1279) {
 			height: 494px;
 		}
+		@include adaptive(767) {
+			height: 300px;
+		}
+		@include adaptive(767) {
+			align-items: flex-end;
+			padding: 50px 15px 30px;
+		}
 	}
 
 	&__img {

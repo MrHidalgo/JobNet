@@ -3,6 +3,9 @@
 .details {
 	padding-top: 40px;
 	padding-bottom: 20px;
+	@include adaptive(767) {
+		padding-top: 5px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -22,6 +25,10 @@
 		position: relative;
 		display: flex;
 		padding: 20px;
+		@include adaptive(767) {
+			flex-direction: column;
+			padding: 20px 15px 0;
+		}
 
 		&-left,
 		&-right {
@@ -39,6 +46,9 @@
 			min-width: 1px;
 			max-width: 100%;
 			padding-top: 70px;
+			@include adaptive(767) {
+				padding-top: 15px;
+			}
 		}
 	}
 
@@ -55,6 +65,11 @@
 		border-color: rgb(234, 234, 234);
 		border-radius: 6px;
 		background-color: rgb(255, 255, 255);
+		@include adaptive(767) {
+			width: 62px;
+			height: 62px;
+			padding: 5px;
+		}
 
 		img {
 			display: block;
@@ -66,10 +81,24 @@
 	}
 
 	&__header {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding-bottom: 10px;
+		@include adaptive(767) {
+			margin-bottom: 10px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: -15px;
+				width: calc(100% + 30px);
+				height: 1px;
+				background-color: #dcdcdc;
+			}
+		}
 
 		&-left {}
 		&-right {
@@ -82,6 +111,9 @@
 		color: #222222;
 		font-size: 24px;
 		font-weight: 600;
+		@include adaptive(767) {
+			font-size: 18px;
+		}
 	}
 
 	&__social {
@@ -109,10 +141,24 @@
 		width: 100%;
 		height: 100%;
 		flex: 1;
+		@include adaptive(767) {
+			white-space: nowrap;
+			overflow-x: auto;
+			position: relative;
+			display: block;
+			font-size: 0;
+			left: -15px;
+			width: calc(100% + 30px);
+			padding-left: 15px;
+		}
 
 		&-item {
 			display: flex;
 			height: 100%;
+			@include adaptive(767) {
+				display: inline-block;
+				vertical-align: top;
+			}
 		}
 	}
 
@@ -129,6 +175,11 @@
 			padding-left: 10px;
 			padding-right: 10px;
 		}
+		@include adaptive(767) {
+			padding-left: 5px;
+			padding-right: 30px;
+			padding-bottom: 5px;
+		}
 
 		&:after {
 			content: '';
@@ -143,6 +194,11 @@
 			border-radius: 3px 3px 0 0;
 			background-color: #663399;
 			@include transition(opacity, visibility, transform);
+			@include adaptive(767) {
+				top: calc(100% - 3px);
+				width: calc(100% - 25px);
+				height: 3px;
+			}
 		}
 
 		&.is-active,
