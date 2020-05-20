@@ -144,6 +144,7 @@
 		@include adaptive(767) {
 			white-space: nowrap;
 			overflow-x: auto;
+			overflow-y: hidden;
 			position: relative;
 			display: block;
 			font-size: 0;

@@ -7,7 +7,8 @@
 	* CALLBACK :: start
 	* ============================================= */
 	const mainHeightSize = () => {
-		const _main = $('#main .main__scroll');
+		const _main = $('#main'),
+			_mainScroll = $('#main .main__scroll');
 
 		if(!_main) {
 			return false;
@@ -25,7 +26,7 @@
 				_wrapper2Height = (_maxHeight * 30) / 100,
 				_wrapper3Height = _maxHeight - (_wrapper1Height + _wrapper2Height);
 
-			_main.css({height: 'calc(100vh - (' + (_otherHeightContent) + 'px))'});
+			_mainScroll.css({height: 'calc(100vh - (' + (_otherHeightContent) + 'px))'});
 
 			$('#main .main__box-wrapper-1').css({height: _wrapper1Height});
 			$('#main .main__box-wrapper-2').css({height: _wrapper2Height});
@@ -57,6 +58,7 @@
 				}, 750);
 			} else {
 				_main.attr('style', '');
+				_mainScroll.attr('style', '');
 
 				$('#main .main__box-wrapper-1').attr('style', '');
 				$('#main .main__box-wrapper-2').attr('style', '');
@@ -186,6 +188,21 @@
 			$(ev.currentTarget).siblings('[vacancies-body-js]').slideToggle(350).css({display: 'flex'});
 		});
 	};
+
+
+	const parallaxBG = () => {
+		$('#mainBg').css({
+			backgroundPositionX: -($('#mainScroll-js').find('.main__box')[0].getBoundingClientRect().left * 0.2)
+		});
+
+		$('#mainScroll-js').scroll((ev) => {
+			const _offset = $(ev.currentTarget).find('.main__box')[0].getBoundingClientRect().left;
+
+			$('#mainBg').css({
+				backgroundPositionX: -(_offset * 0.2)
+			});
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -216,6 +233,7 @@
 		exhibitorsSection();
 		jobsSection();
 		vacanciesCollapse();
+		parallaxBG();
 		// ==========================================
 	};
 	initNative();
