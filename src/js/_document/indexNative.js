@@ -268,14 +268,14 @@
 
 	const parallaxBG = () => {
 		$('#mainBg').css({
-			backgroundPositionX: ($('#mainScroll-js').find('.main__box')[0].getBoundingClientRect().left * 0.2)
+			backgroundPositionX: ($('#mainScroll-js').find('.main__box')[0].getBoundingClientRect().left * 0.125)
 		});
 
 		$('#mainScroll-js').scroll((ev) => {
 			const _offset = $(ev.currentTarget).find('.main__box')[0].getBoundingClientRect().left;
 
 			$('#mainBg').css({
-				backgroundPositionX: (_offset * 0.2)
+				backgroundPositionX: (_offset * 0.125)
 			});
 		});
 	};
