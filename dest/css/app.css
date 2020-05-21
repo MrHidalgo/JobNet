@@ -3733,9 +3733,9 @@ picture {
     -webkit-flex: unset;
         -ms-flex: unset;
             flex: unset;
-    height: 80vh;
-    min-height: 80vh;
-    max-height: 80vh;
+    height: 75vh;
+    min-height: 75vh;
+    max-height: 75vh;
   }
 }
 
@@ -3946,7 +3946,7 @@ picture {
   padding-top: 35px;
 }
 
-@media screen and (max-width: 1023px) and (max-height: 767px) {
+@media screen and (max-width: 1023px) and (max-height: 424px) {
   /* line 138, src/scss/_components/main/_main.scss */
   .main__box-wrapper-3 > div:nth-of-type(odd) {
     padding-top: 5px;
@@ -3958,7 +3958,7 @@ picture {
   padding-bottom: 50px;
 }
 
-@media screen and (max-width: 1023px) and (max-height: 767px) {
+@media screen and (max-width: 1023px) and (max-height: 424px) {
   /* line 144, src/scss/_components/main/_main.scss */
   .main__box-wrapper-3 > div:nth-of-type(even) {
     padding-bottom: 15px;
