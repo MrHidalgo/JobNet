@@ -150,7 +150,7 @@
 			$('#jobs').addClass('is-open');
 			$('#overlay').addClass('is-show');
 
-			$('#exhibitors').removeClass('is-open');
+			$('#exhibitors, #chat').removeClass('is-open');
 		});
 
 		$('[jobs-card-js]').on('click', (ev) => {
@@ -178,6 +178,29 @@
 			if (e.keyCode === 27) {
 				_helperClose();
 			}
+		});
+	};
+
+
+	const messageSection = () => {
+		function _helperClose() {
+			$('html, body').removeClass('is-hideScroll');
+			$('#chat').removeClass('is-chat');
+			$('#overlay').removeClass('is-show');
+
+			$('[message-btn-js]').removeClass('is-active');
+		}
+
+		$('[message-btn-js]').on('click', (ev) => {
+			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
+			$('#chat').addClass('is-open');
+			$('#overlay').addClass('is-show');
+
+			$('#exhibitors, #jobs').removeClass('is-open');
 		});
 	};
 
@@ -232,6 +255,7 @@
 		detailsToggle();
 		exhibitorsSection();
 		jobsSection();
+		messageSection();
 		vacanciesCollapse();
 		parallaxBG();
 		// ==========================================

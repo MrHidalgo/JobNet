@@ -3728,7 +3728,7 @@ picture {
 /* line 3, src/scss/_components/aside/_stand.scss */
 .stand {
   position: relative;
-  background-image: url("../img/img-stand-bg@2x.png");
+  background-image: url("../img/img-stand-bg.png");
   background-repeat: no-repeat;
   background-position: top left;
   -webkit-background-size: cover;
