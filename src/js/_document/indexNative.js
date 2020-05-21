@@ -108,7 +108,7 @@
 			$('#overlay').addClass('is-show');
 
 			$('#jobs').removeClass('is-open is-chat');
-			$('#chat').removeClass('is-open');
+			$('#chat, #seminar').removeClass('is-open');
 
 			if($('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').removeClass('is-active');
@@ -137,6 +137,48 @@
 	};
 
 
+	const seminarSection = () => {
+		function _helperClose() {
+			$('[seminars-btn-js]').removeClass('is-active');
+			$('html, body').removeClass('is-hideScroll');
+			$('#seminar').removeClass('is-open');
+			$('#overlay').removeClass('is-show');
+		}
+
+		$('[seminars-btn-js]').on('click', (ev) => {
+			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
+			$('#seminar').addClass('is-open');
+			$('#overlay').addClass('is-show');
+
+			$('#jobs').removeClass('is-open is-chat');
+			$('#chat, #exhibitors').removeClass('is-open');
+
+			if($('[hamburger-js]').hasClass('is-active')) {
+				$('[hamburger-js]').removeClass('is-active');
+				$('[mobile-block-js]').removeClass('is-open');
+			}
+		});
+
+		$('[seminars-close-js]').on('click', (ev) => {
+			_helperClose();
+		});
+
+		$('#overlay').on('click', function (e) {
+			_helperClose();
+		});
+
+		$(document).on('keyup', function(e){
+			if (e.keyCode === 27) {
+				_helperClose();
+			}
+		});
+	};
+
+
 	const jobsSection = () => {
 		function _helperClose() {
 			$('html, body').removeClass('is-hideScroll');
@@ -159,7 +201,7 @@
 			$('#jobs').addClass('is-open');
 			$('#overlay').addClass('is-show');
 
-			$('#exhibitors, #chat').removeClass('is-open');
+			$('#exhibitors, #chat, #seminar').removeClass('is-open');
 
 			if($('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').removeClass('is-active');
@@ -206,7 +248,7 @@
 			$('#chat').addClass('is-open');
 			$('#overlay').addClass('is-show');
 
-			$('#exhibitors, #jobs').removeClass('is-open');
+			$('#exhibitors, #jobs, #seminar').removeClass('is-open');
 
 			if($('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').removeClass('is-active');
@@ -265,6 +307,7 @@
 		perfectScrollbarCB();
 		detailsToggle();
 		exhibitorsSection();
+		seminarSection();
 		jobsSection();
 		messageSection();
 		vacanciesCollapse();

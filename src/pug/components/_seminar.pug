@@ -1,0 +1,29 @@
+// SECTION :: START
+
+section#seminar.seminar.hidden
+
+	a.seminar__close(href="#" seminar-close-js)
+		i.icon-font.icon-close
+
+	.seminar__head
+		p.seminar__title Seminars
+
+	.seminar__search
+		input(type='text' name='' placeholder='Search Seminars')
+		i.icon-font.icon-search
+
+	.seminar__body
+
+		.seminar__box-wrapper
+			-for(let i = 0; i < 20; i++)
+				div
+					a.seminar__box(href="#")
+						.seminar__box-left
+							.seminar__box-logo
+								img(src="img/img-logo.png" srcset="img/img-logo@2x.png 2x" alt="")
+						.seminar__box-right
+							p.seminar__box-title WWF Myanmar
+							p.seminar__box-date 01.01.2020 - 02.02.2020
+
+
+// SECTION :: END

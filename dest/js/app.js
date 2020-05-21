@@ -298,7 +298,7 @@ var initSwiper = function initSwiper() {
 			$('#overlay').addClass('is-show');
 
 			$('#jobs').removeClass('is-open is-chat');
-			$('#chat').removeClass('is-open');
+			$('#chat, #seminar').removeClass('is-open');
 
 			if ($('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').removeClass('is-active');
@@ -327,6 +327,47 @@ var initSwiper = function initSwiper() {
 		});
 	};
 
+	var seminarSection = function seminarSection() {
+		function _helperClose() {
+			$('[seminars-btn-js]').removeClass('is-active');
+			$('html, body').removeClass('is-hideScroll');
+			$('#seminar').removeClass('is-open');
+			$('#overlay').removeClass('is-show');
+		}
+
+		$('[seminars-btn-js]').on('click', function (ev) {
+			$('html, body').addClass('is-hideScroll');
+
+			$('.header__link').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+
+			$('#seminar').addClass('is-open');
+			$('#overlay').addClass('is-show');
+
+			$('#jobs').removeClass('is-open is-chat');
+			$('#chat, #exhibitors').removeClass('is-open');
+
+			if ($('[hamburger-js]').hasClass('is-active')) {
+				$('[hamburger-js]').removeClass('is-active');
+				$('[mobile-block-js]').removeClass('is-open');
+			}
+		});
+
+		$('[seminars-close-js]').on('click', function (ev) {
+			_helperClose();
+		});
+
+		$('#overlay').on('click', function (e) {
+			_helperClose();
+		});
+
+		$(document).on('keyup', function (e) {
+			if (e.keyCode === 27) {
+				_helperClose();
+			}
+		});
+	};
+
 	var jobsSection = function jobsSection() {
 		function _helperClose() {
 			$('html, body').removeClass('is-hideScroll');
@@ -349,7 +390,7 @@ var initSwiper = function initSwiper() {
 			$('#jobs').addClass('is-open');
 			$('#overlay').addClass('is-show');
 
-			$('#exhibitors, #chat').removeClass('is-open');
+			$('#exhibitors, #chat, #seminar').removeClass('is-open');
 
 			if ($('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').removeClass('is-active');
@@ -395,7 +436,7 @@ var initSwiper = function initSwiper() {
 			$('#chat').addClass('is-open');
 			$('#overlay').addClass('is-show');
 
-			$('#exhibitors, #jobs').removeClass('is-open');
+			$('#exhibitors, #jobs, #seminar').removeClass('is-open');
 
 			if ($('[hamburger-js]').hasClass('is-active')) {
 				$('[hamburger-js]').removeClass('is-active');
@@ -451,6 +492,7 @@ var initSwiper = function initSwiper() {
 		perfectScrollbarCB();
 		detailsToggle();
 		exhibitorsSection();
+		seminarSection();
 		jobsSection();
 		messageSection();
 		vacanciesCollapse();
