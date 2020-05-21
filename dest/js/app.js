@@ -235,11 +235,15 @@ var initSwiper = function initSwiper() {
 						opacity: 1
 					}, 750);
 				}, 200);
+
+				$('#exhibitors, #jobs, #chat').removeClass('hidden');
 			});
 		} else {
 			_main.animate({
 				opacity: 1
 			}, 750);
+
+			$('#exhibitors, #jobs, #chat').removeClass('hidden');
 		}
 
 		$(window).on('resize', function (ev) {
@@ -295,6 +299,11 @@ var initSwiper = function initSwiper() {
 
 			$('#jobs').removeClass('is-open is-chat');
 			$('#chat').removeClass('is-open');
+
+			if ($('[hamburger-js]').hasClass('is-active')) {
+				$('[hamburger-js]').removeClass('is-active');
+				$('[mobile-block-js]').removeClass('is-open');
+			}
 		});
 
 		$('[exhibitors-close-js]').on('click', function (ev) {
@@ -341,6 +350,11 @@ var initSwiper = function initSwiper() {
 			$('#overlay').addClass('is-show');
 
 			$('#exhibitors, #chat').removeClass('is-open');
+
+			if ($('[hamburger-js]').hasClass('is-active')) {
+				$('[hamburger-js]').removeClass('is-active');
+				$('[mobile-block-js]').removeClass('is-open');
+			}
 		});
 
 		$('[jobs-card-js]').on('click', function (ev) {
@@ -372,14 +386,6 @@ var initSwiper = function initSwiper() {
 	};
 
 	var messageSection = function messageSection() {
-		function _helperClose() {
-			$('html, body').removeClass('is-hideScroll');
-			$('#chat').removeClass('is-chat');
-			$('#overlay').removeClass('is-show');
-
-			$('[message-btn-js]').removeClass('is-active');
-		}
-
 		$('[message-btn-js]').on('click', function (ev) {
 			$('html, body').addClass('is-hideScroll');
 
@@ -390,6 +396,11 @@ var initSwiper = function initSwiper() {
 			$('#overlay').addClass('is-show');
 
 			$('#exhibitors, #jobs').removeClass('is-open');
+
+			if ($('[hamburger-js]').hasClass('is-active')) {
+				$('[hamburger-js]').removeClass('is-active');
+				$('[mobile-block-js]').removeClass('is-open');
+			}
 		});
 	};
 
@@ -402,14 +413,14 @@ var initSwiper = function initSwiper() {
 
 	var parallaxBG = function parallaxBG() {
 		$('#mainBg').css({
-			backgroundPositionX: -($('#mainScroll-js').find('.main__box')[0].getBoundingClientRect().left * 0.2)
+			backgroundPositionX: $('#mainScroll-js').find('.main__box')[0].getBoundingClientRect().left * 0.2
 		});
 
 		$('#mainScroll-js').scroll(function (ev) {
 			var _offset = $(ev.currentTarget).find('.main__box')[0].getBoundingClientRect().left;
 
 			$('#mainBg').css({
-				backgroundPositionX: -(_offset * 0.2)
+				backgroundPositionX: _offset * 0.2
 			});
 		});
 	};
