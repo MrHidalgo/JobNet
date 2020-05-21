@@ -3611,6 +3611,16 @@ picture {
 }
 
 /* line 130, src/scss/_components/main/_main.scss */
+.main__box-wrapper-3 > div:nth-of-type(odd) {
+  padding-top: 35px;
+}
+
+/* line 133, src/scss/_components/main/_main.scss */
+.main__box-wrapper-3 > div:nth-of-type(even) {
+  padding-bottom: 50px;
+}
+
+/* line 139, src/scss/_components/main/_main.scss */
 .main__box-wrapper > div {
   display: inline-block;
   vertical-align: middle;
@@ -3618,7 +3628,7 @@ picture {
   height: 100%;
 }
 
-/* line 142, src/scss/_components/main/_main.scss */
+/* line 148, src/scss/_components/main/_main.scss */
 .main__img {
   display: block;
   max-width: 100%;

@@ -125,6 +125,15 @@
 					padding-top: 15px;
 					padding-bottom: 15px;
 				}
+
+				> div {
+					&:nth-of-type(odd) {
+						padding-top: 35px;
+					}
+					&:nth-of-type(even) {
+						padding-bottom: 50px;
+					}
+				}
 			}
 
 			> div {
@@ -132,9 +141,6 @@
 				vertical-align: middle;
 				width: auto;
 				height: 100%;
-				@include adaptive(767) {
-
-				}
 			}
 		}
 	}
