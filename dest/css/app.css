@@ -3955,7 +3955,7 @@ picture {
 
 /* line 144, src/scss/_components/main/_main.scss */
 .main__box-wrapper-3 > div:nth-of-type(even) {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 1023px) and (max-height: 424px) {
