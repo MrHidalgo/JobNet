@@ -267,7 +267,7 @@ var initSwiper = function initSwiper() {
 	var perfectScrollbarCB = function perfectScrollbarCB() {
 		if (document.getElementById('mainScroll-js')) {
 			var ps = new PerfectScrollbar('#mainScroll-js', {
-				wheelSpeed: 2,
+				wheelSpeed: 1,
 				wheelPropagation: true
 			});
 		}
