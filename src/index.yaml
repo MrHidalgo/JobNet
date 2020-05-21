@@ -3,19 +3,22 @@ ProjectTitle: JobNet
 PageList:
 - file: index.html
   titleName: Hall
-  ready: 55
+  ready: 100
 - file: login.html
   titleName: Log In
-  ready: 55
+  ready: 100
 - file: hall-1.html
   titleName: Booth Hall
-  ready: 55
+  ready: 100
+- file: hall-5.html
+  titleName: Booth Hall
+  ready: 100
 - file: hall-2.html
   titleName: Booth Hall
-  ready: 55
+  ready: 100
 - file: hall-3.html
   titleName: Booth Hall
-  ready: 55
+  ready: 100
 - file: hall-4.html
   titleName: Booth Hall
-  ready: 55
+  ready: 100

@@ -11,10 +11,11 @@ section#main.main
 			.main__box-wrapper.main__box-wrapper-1
 				-for(let idx = 0; idx < 20; idx++)
 					div
-						a.main__box(class!= 'main__box-' + idx href="hall-1.html" data-val='small')
-							if(idx % 2 === 0)
+						if(idx % 2 === 0)
+							a.main__box(class!= 'main__box-' + idx href="hall-1.html" data-val='small')
 								img.main__img(src="img/img-box-small-1.jpg" srcset="img/img-box-small-1@2x.jpg 2x" alt="")
-							else
+						else
+							a.main__box(class!= 'main__box-' + idx href="hall-5.html" data-val='small')
 								img.main__img(src="img/img-box-small-2.jpg" srcset="img/img-box-small-2@2x.jpg 2x" alt="")
 
 		.main__wrapper.main__wrapper-2

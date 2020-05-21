@@ -1,0 +1,21 @@
+---
+title: JobNet | Hall | Inner
+
+pageClassName: p-home
+---
+extends shared/_layout
+
+block modal
+	include components/_login
+
+block content
+	div.body(class!= pageClassName)
+
+			include components/aside/_stand-4
+			include components/aside/_details
+			include components/aside/_profile
+			include components/aside/_gallery
+			include components/aside/_video
+			include components/aside/_testimonials
+			include components/aside/_document
+			include components/aside/_vacancies
